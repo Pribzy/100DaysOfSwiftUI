@@ -1,9 +1,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let students = ["Harry", "Ron", "Hermoione"]
+    @State private var selectedStudent = "Harry"
+    
     @State private var tapCount = 0
     @State private var name = ""
-
+    
     var body: some View {
         NavigationView() {
             Form {
@@ -12,7 +15,16 @@ struct ContentView: View {
                 }
                 TextField("Enter your name", text: $name) // projected value for two-way binding
                 Text("Your name is \(name)")
-
+                Section {
+                    Picker("Select student", selection: $selectedStudent) {
+                        Section {
+                            ForEach(0..<students.count) {
+                                Text(students[$0])
+                            }
+                        }
+                    }
+                }
+                
                 Section {
                     ForEach(0..<100) {
                         Text("Row \($0)")
