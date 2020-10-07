@@ -6,6 +6,18 @@ struct SplitView: View {
     @State private var checkAmount = ""
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 2
+
+    var totalPerPerson: Double {
+        let peopleCount = Double(numberOfPeople + 2)
+        let tipSelection = Double(tipPercentages[tipPercentage])
+        let orderAmount = Double(checkAmount) ?? 0
+
+        let tipValue = orderAmount / 100 * tipSelection
+        let grandTotal = orderAmount + tipValue
+        let amountPerPerson = grandTotal / peopleCount
+
+        return amountPerPerson
+    }
     
     var body: some View {
         NavigationView {
@@ -21,16 +33,17 @@ struct SplitView: View {
                     }
                 }
 
-                Section {
+                Section(header: Text("How much tip do you want to leave?")) {
                     Picker("Tip percentage", selection: $tipPercentage) {
                         ForEach(0 ..< tipPercentages.count) {
                             Text("\(tipPercentages[$0])%")
                         }
                     }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
 
                 Section {
-                    Text("$\(checkAmount)")
+                    Text("$\(totalPerPerson, specifier: "%.2f")")
                 }
             }
             .navigationTitle("WeSplit")
