@@ -13,6 +13,7 @@
 		3409CA6B252DD7E30046C415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3409CA6A252DD7E30046C415 /* Assets.xcassets */; };
 		3409CA6E252DD7E30046C415 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3409CA6D252DD7E30046C415 /* Preview Assets.xcassets */; };
 		3409CA71252DD7E30046C415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3409CA6F252DD7E30046C415 /* LaunchScreen.storyboard */; };
+		3409CA7B252DEA850046C415 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409CA7A252DEA850046C415 /* SplitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3409CA6D252DD7E30046C415 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3409CA70252DD7E30046C415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3409CA72252DD7E30046C415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3409CA7A252DEA850046C415 /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3409CA6F252DD7E30046C415 /* LaunchScreen.storyboard */,
 				3409CA72252DD7E30046C415 /* Info.plist */,
 				3409CA6C252DD7E30046C415 /* Preview Content */,
+				3409CA7A252DEA850046C415 /* SplitView.swift */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3409CA65252DD7E00046C415 /* AppDelegate.swift in Sources */,
+				3409CA7B252DEA850046C415 /* SplitView.swift in Sources */,
 				3409CA67252DD7E00046C415 /* SceneDelegate.swift in Sources */,
 				3409CA69252DD7E00046C415 /* ContentView.swift in Sources */,
 			);

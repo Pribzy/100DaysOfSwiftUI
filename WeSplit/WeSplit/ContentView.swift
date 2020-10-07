@@ -3,10 +3,10 @@ import SwiftUI
 struct ContentView: View {
     let students = ["Harry", "Ron", "Hermoione"]
     @State private var selectedStudent = "Harry"
-    
+
     @State private var tapCount = 0
     @State private var name = ""
-    
+
     var body: some View {
         NavigationView() {
             Form {
@@ -24,7 +24,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                
+
                 Section {
                     ForEach(0..<100) {
                         Text("Row \($0)")
