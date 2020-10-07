@@ -18,6 +18,12 @@ struct SplitView: View {
 
         return amountPerPerson
     }
+
+    var totalAmount: Double {
+        let peopleCount = Double(numberOfPeople + 2)
+        let orderAmount = Double(checkAmount) ?? 0
+        return (totalPerPerson * peopleCount)
+    }
     
     var body: some View {
         NavigationView {
@@ -45,6 +51,11 @@ struct SplitView: View {
                 Section(header: Text("Amount per person")) {
                     Text("$\(totalPerPerson, specifier: "%.2f")")
                 }
+
+                Section(header: Text("Total amount")) {
+                    Text("$\(totalAmount, specifier: "%.2f")")
+                }
+
             }
             .navigationTitle("WeSplit")
         }
