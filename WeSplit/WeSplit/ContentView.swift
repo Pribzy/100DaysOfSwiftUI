@@ -5,12 +5,22 @@ struct ContentView: View {
     @State private var name = ""
 
     var body: some View {
-        Form {
-            Button("Tap Count \(tapCount)") {
-                tapCount += 1
+        NavigationView() {
+            Form {
+                Button("Tap Count \(tapCount)") {
+                    tapCount += 1
+                }
+                TextField("Enter your name", text: $name) // projected value for two-way binding
+                Text("Your name is \(name)")
+
+                Section {
+                    ForEach(0..<100) {
+                        Text("Row \($0)")
+                    }
+                }
             }
-            TextField("Enter your name", text: $name) // projected value for two-way binding
-            Text("Your name is \(name)")
+            .navigationTitle("SwiftUI")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
