@@ -4,14 +4,14 @@ struct SplitView: View {
     let tipPercentages = [10, 15, 20, 25, 0]
 
     @State private var checkAmount = ""
-    @State private var numberOfPeople = 2
+    @State private var numberOfPeople = ""
     @State private var tipPercentage = 2
 
     var totalPerPerson: Double {
-        let peopleCount = Double(numberOfPeople + 2)
-        let tipSelection = Double(tipPercentages[tipPercentage])
-        let orderAmount = Double(checkAmount) ?? 0
+        guard let peopleCount = Double(numberOfPeople),
+              let orderAmount = Double(checkAmount) else { return 0 }
 
+        let tipSelection = Double(tipPercentages[tipPercentage])
         let tipValue = orderAmount / 100 * tipSelection
         let grandTotal = orderAmount + tipValue
         let amountPerPerson = grandTotal / peopleCount
@@ -20,11 +20,10 @@ struct SplitView: View {
     }
 
     var totalAmount: Double {
-        let peopleCount = Double(numberOfPeople + 2)
-        let orderAmount = Double(checkAmount) ?? 0
-        return (totalPerPerson * peopleCount)
+        guard let peopleCount = Double(numberOfPeople) else { return 0 }
+        return totalPerPerson * peopleCount
     }
-    
+
     var body: some View {
         NavigationView {
             Form {
@@ -32,11 +31,8 @@ struct SplitView: View {
                     TextField("Amount", text: $checkAmount)
                         .keyboardType(.decimalPad)
 
-                    Picker("Number of people", selection: $numberOfPeople) {
-                        ForEach(2 ..< 100) {
-                            Text("\($0) people")
-                        }
-                    }
+                    TextField("Number of people", text: $numberOfPeople)
+                        .keyboardType(.decimalPad)
                 }
 
                 Section(header: Text("How much tip do you want to leave?")) {
