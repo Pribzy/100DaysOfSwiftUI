@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  WeSplit
-//
-//  Created by Pribelszki Levente on 2020. 10. 07..
-//
-
 import SwiftUI
 
 struct ContentView: View {
