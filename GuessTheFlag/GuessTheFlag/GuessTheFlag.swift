@@ -22,6 +22,11 @@ struct GuessTheFlag: View {
                         .font(.largeTitle)
                         .fontWeight(.black)
                 }
+
+                Text("Actual score is \(actualScore).")
+                    .foregroundColor(.white)
+                    .bold()
+
                 ForEach(0 ..< 3) { number in
                     Button(action: {
                         flagTapped(number)
