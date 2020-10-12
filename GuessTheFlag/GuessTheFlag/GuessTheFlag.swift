@@ -7,6 +7,8 @@ struct GuessTheFlag: View {
     @State private var showingScore = false
     @State private var scoreTitle = ""
 
+    @State private var actualScore: Int = 0
+
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
@@ -36,7 +38,7 @@ struct GuessTheFlag: View {
             }
         }
         .alert(isPresented: $showingScore) {
-            Alert(title: Text(scoreTitle), message: Text("Your score is ???"), dismissButton: .default(Text("Continue")) {
+            Alert(title: Text(scoreTitle), message: Text("Your score is \(actualScore)."), dismissButton: .default(Text("Continue")) {
                 askQuestion()
             })
         }
@@ -45,8 +47,10 @@ struct GuessTheFlag: View {
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
+            actualScore += 1
         } else {
             scoreTitle = "Wrong"
+            actualScore -= actualScore == 0 ? 0 : 1
         }
 
         showingScore = true
