@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    private var units: [LenghtUnit] = LenghtUnit.allCases
+    private var units: [UnitLength] = [.millimeters, .centimeters, .decimeters, .meters, .kilometers]
 
     @State private var fromUnitIndex = 0
     @State private var fromUnitValue = ""
@@ -11,7 +11,8 @@ struct ContentView: View {
     private var convertedValue: Double {
         let fromUnit = units[fromUnitIndex]
         let toUnit = units[toUnitIndex]
-        return fromUnit.convertingRatio(to: toUnit) * fromUnitValue.asDouble
+        let fromUnitMeasurement = Measurement(value: fromUnitValue.asDouble, unit: fromUnit)
+        return fromUnitMeasurement.converted(to: toUnit).value
     }
 
     var body: some View {
