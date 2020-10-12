@@ -2,24 +2,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            HStack {
-                Text("First")
-                Text("First")
-                Text("First")
-            }
-            HStack {
-                Text("First")
-                Text("First")
-                Text("First")
-            }
-            HStack {
-                Text("First")
-                Text("First")
-                Text("First")
-            }
+        ZStack {
+            Color.red.edgesIgnoringSafeArea(.all)
+            Text("Your content")
         }
-
     }
 }
 
