@@ -13,6 +13,7 @@
 		3467F16E2534A19B003EFA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3467F16D2534A19B003EFA14 /* Assets.xcassets */; };
 		3467F1712534A19B003EFA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3467F1702534A19B003EFA14 /* Preview Assets.xcassets */; };
 		3467F1742534A19B003EFA14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3467F1722534A19B003EFA14 /* LaunchScreen.storyboard */; };
+		3467F17D2534ADBD003EFA14 /* GuessTheFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F17C2534ADBD003EFA14 /* GuessTheFlag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3467F1702534A19B003EFA14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3467F1732534A19B003EFA14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3467F1752534A19B003EFA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3467F17C2534ADBD003EFA14 /* GuessTheFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3467F1722534A19B003EFA14 /* LaunchScreen.storyboard */,
 				3467F1752534A19B003EFA14 /* Info.plist */,
 				3467F16F2534A19B003EFA14 /* Preview Content */,
+				3467F17C2534ADBD003EFA14 /* GuessTheFlag.swift */,
 			);
 			path = GuessTheFlag;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				3467F1682534A199003EFA14 /* AppDelegate.swift in Sources */,
 				3467F16A2534A199003EFA14 /* SceneDelegate.swift in Sources */,
 				3467F16C2534A199003EFA14 /* ContentView.swift in Sources */,
+				3467F17D2534ADBD003EFA14 /* GuessTheFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
