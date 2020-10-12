@@ -1,16 +1,25 @@
-//
-//  ContentView.swift
-//  GuessTheFlag
-//
-//  Created by Pribelszki Levente on 2020. 10. 12..
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            HStack {
+                Text("First")
+                Text("First")
+                Text("First")
+            }
+            HStack {
+                Text("First")
+                Text("First")
+                Text("First")
+            }
+            HStack {
+                Text("First")
+                Text("First")
+                Text("First")
+            }
+        }
+
     }
 }
 
