@@ -54,7 +54,7 @@ struct GuessTheFlag: View {
             scoreTitle = "Correct"
             actualScore += 1
         } else {
-            scoreTitle = "Wrong"
+            scoreTitle = "Wrong! The correct answer was \(countries[correctAnswer])."
             actualScore -= actualScore == 0 ? 0 : 1
         }
 
