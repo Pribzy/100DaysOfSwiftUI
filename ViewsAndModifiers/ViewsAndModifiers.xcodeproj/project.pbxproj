@@ -60,6 +60,7 @@
 		3467F18A2535A110003EFA14 /* ViewsAndModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				3467F1AC2535B497003EFA14 /* Modifiers */,
 				3467F18B2535A110003EFA14 /* AppDelegate.swift */,
 				3467F18D2535A110003EFA14 /* SceneDelegate.swift */,
 				3467F18F2535A110003EFA14 /* ContentView.swift */,
@@ -68,7 +69,6 @@
 				3467F1962535A114003EFA14 /* LaunchScreen.storyboard */,
 				3467F1992535A114003EFA14 /* Info.plist */,
 				3467F1932535A114003EFA14 /* Preview Content */,
-				3467F1A82535B392003EFA14 /* TitleViewModifier.swift */,
 			);
 			path = ViewsAndModifiers;
 			sourceTree = "<group>";
@@ -79,6 +79,14 @@
 				3467F1942535A114003EFA14 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3467F1AC2535B497003EFA14 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3467F1A82535B392003EFA14 /* TitleViewModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
