@@ -14,11 +14,17 @@ struct ContentView: View {
                 .background(Color.red)
                 .edgesIgnoringSafeArea(.all)
 
-            Button("Push me") {
+
+            Button(action: {
                 print(type(of: self.body))
+            }) {
+                Text("Hello button!")
+                    .fontWeight(.bold)
+                    .font(.title)
             }
-            .background(Color.red)
             .frame(width: 200, height: 200)
+            .background(Color.red)
+            .foregroundColor(.white)
         }
     }
 }
