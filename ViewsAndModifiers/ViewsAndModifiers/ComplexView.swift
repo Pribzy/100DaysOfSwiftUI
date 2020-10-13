@@ -9,6 +9,13 @@ struct ComplexView: View {
             Color.blue
                 .frame(width: 300, height: 200)
                 .watermarked(with: "Pribelszki")
+
+            GridStack(rows: 3, columns: 3) { (row, col) in
+                HStack {
+                    Image(systemName: "\(row * 4 + col).circle")
+                    Text("R\(row) C\(col)")
+                }
+            }
         }
     }
 }
