@@ -17,6 +17,7 @@
 		3467F1A92535B392003EFA14 /* TitleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1A82535B392003EFA14 /* TitleViewModifier.swift */; };
 		3467F1AE2535B4B8003EFA14 /* WaterMarkModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1AD2535B4B8003EFA14 /* WaterMarkModifier.swift */; };
 		3467F1B22535B632003EFA14 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1B12535B632003EFA14 /* GridStack.swift */; };
+		3467F1B52535B990003EFA14 /* BlueFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1B42535B990003EFA14 /* BlueFontModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3467F1A82535B392003EFA14 /* TitleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModifier.swift; sourceTree = "<group>"; };
 		3467F1AD2535B4B8003EFA14 /* WaterMarkModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMarkModifier.swift; sourceTree = "<group>"; };
 		3467F1B12535B632003EFA14 /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
+		3467F1B42535B990003EFA14 /* BlueFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueFontModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				3467F1A82535B392003EFA14 /* TitleViewModifier.swift */,
 				3467F1AD2535B4B8003EFA14 /* WaterMarkModifier.swift */,
+				3467F1B42535B990003EFA14 /* BlueFontModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				3467F1B22535B632003EFA14 /* GridStack.swift in Sources */,
 				3467F1A92535B392003EFA14 /* TitleViewModifier.swift in Sources */,
 				3467F1A22535B1FA003EFA14 /* ComplexView.swift in Sources */,
+				3467F1B52535B990003EFA14 /* BlueFontModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

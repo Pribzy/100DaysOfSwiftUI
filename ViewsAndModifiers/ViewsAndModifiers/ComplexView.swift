@@ -16,6 +16,11 @@ struct ComplexView: View {
                     Text("R\(row) C\(col)")
                 }
             }
+
+            Text("Custom blue")
+                .blueFont(with: .body)
+            Text("Custom blue with large font")
+                .blueFont(with: .largeTitle)
         }
     }
 }
