@@ -15,6 +15,7 @@
 		3467F1982535A114003EFA14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3467F1962535A114003EFA14 /* LaunchScreen.storyboard */; };
 		3467F1A22535B1FA003EFA14 /* ComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1A12535B1FA003EFA14 /* ComplexView.swift */; };
 		3467F1A92535B392003EFA14 /* TitleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1A82535B392003EFA14 /* TitleViewModifier.swift */; };
+		3467F1AE2535B4B8003EFA14 /* WaterMarkModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1AD2535B4B8003EFA14 /* WaterMarkModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3467F1992535A114003EFA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3467F1A12535B1FA003EFA14 /* ComplexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexView.swift; sourceTree = "<group>"; };
 		3467F1A82535B392003EFA14 /* TitleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModifier.swift; sourceTree = "<group>"; };
+		3467F1AD2535B4B8003EFA14 /* WaterMarkModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMarkModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				3467F1A82535B392003EFA14 /* TitleViewModifier.swift */,
+				3467F1AD2535B4B8003EFA14 /* WaterMarkModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3467F18C2535A110003EFA14 /* AppDelegate.swift in Sources */,
+				3467F1AE2535B4B8003EFA14 /* WaterMarkModifier.swift in Sources */,
 				3467F18E2535A110003EFA14 /* SceneDelegate.swift in Sources */,
 				3467F1902535A110003EFA14 /* ContentView.swift in Sources */,
 				3467F1A92535B392003EFA14 /* TitleViewModifier.swift in Sources */,
