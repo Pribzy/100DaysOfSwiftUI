@@ -25,6 +25,16 @@ struct ContentView: View {
             .frame(width: 200, height: 200)
             .background(Color.red)
             .foregroundColor(.white)
+
+            Text("Hello World")
+                .padding()
+                .background(Color.red)
+                .padding()
+                .background(Color.blue)
+                .padding()
+                .background(Color.green)
+                .padding()
+                .background(Color.yellow)
         }
     }
 }
