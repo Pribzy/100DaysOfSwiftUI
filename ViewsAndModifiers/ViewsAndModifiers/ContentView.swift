@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  ViewsAndModifiers
-//
-//  Created by Pribelszki Levente on 2020. 10. 13..
-//
-
 import SwiftUI
 
 struct ContentView: View {
