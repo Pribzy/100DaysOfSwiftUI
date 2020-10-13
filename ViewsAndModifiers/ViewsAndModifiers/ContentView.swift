@@ -55,6 +55,9 @@ struct ContentView: View {
                 motto1
                 motto2
             }
+
+            Text("custom modified view")
+                .roundedView()
         }
     }
 }

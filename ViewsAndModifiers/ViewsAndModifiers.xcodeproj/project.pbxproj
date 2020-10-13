@@ -14,6 +14,7 @@
 		3467F1952535A114003EFA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3467F1942535A114003EFA14 /* Preview Assets.xcassets */; };
 		3467F1982535A114003EFA14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3467F1962535A114003EFA14 /* LaunchScreen.storyboard */; };
 		3467F1A22535B1FA003EFA14 /* ComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1A12535B1FA003EFA14 /* ComplexView.swift */; };
+		3467F1A92535B392003EFA14 /* TitleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467F1A82535B392003EFA14 /* TitleViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3467F1972535A114003EFA14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3467F1992535A114003EFA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3467F1A12535B1FA003EFA14 /* ComplexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexView.swift; sourceTree = "<group>"; };
+		3467F1A82535B392003EFA14 /* TitleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3467F1962535A114003EFA14 /* LaunchScreen.storyboard */,
 				3467F1992535A114003EFA14 /* Info.plist */,
 				3467F1932535A114003EFA14 /* Preview Content */,
+				3467F1A82535B392003EFA14 /* TitleViewModifier.swift */,
 			);
 			path = ViewsAndModifiers;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				3467F18C2535A110003EFA14 /* AppDelegate.swift in Sources */,
 				3467F18E2535A110003EFA14 /* SceneDelegate.swift in Sources */,
 				3467F1902535A110003EFA14 /* ContentView.swift in Sources */,
+				3467F1A92535B392003EFA14 /* TitleViewModifier.swift in Sources */,
 				3467F1A22535B1FA003EFA14 /* ComplexView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
