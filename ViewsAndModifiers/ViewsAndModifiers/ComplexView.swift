@@ -5,6 +5,10 @@ struct ComplexView: View {
         VStack(spacing: 10) {
             CapsuleText(titleText: "First")
             CapsuleText(titleText: "Second")
+
+            Color.blue
+                .frame(width: 300, height: 200)
+                .watermarked(with: "Pribelszki")
         }
     }
 }
