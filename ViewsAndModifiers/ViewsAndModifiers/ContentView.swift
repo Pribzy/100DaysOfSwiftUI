@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack {
+            Text("Hello, world!")
+                .background(Color.red)
+                .edgesIgnoringSafeArea(.all)
+
+            Button("Push me") {
+                print(type(of: self.body))
+            }
             .background(Color.red)
-            .edgesIgnoringSafeArea(.all)
+            .frame(width: 200, height: 200)
+        }
     }
 }
 
