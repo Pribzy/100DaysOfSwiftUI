@@ -4,6 +4,15 @@ struct ContentView: View {
 
     @State private var userRedText: Bool = false
 
+    var motto1: some View {
+        Text("Draco dormiens")
+    }
+
+    var motto2: some View {
+        Text("Harry rules")
+            .bold()
+    }
+
     var body: some View {
         VStack {
             Text("Hello, world!")
@@ -41,6 +50,11 @@ struct ContentView: View {
             }
             .font(.title)
             .blur(radius: 5)
+
+            VStack {
+                motto1
+                motto2
+            }
         }
     }
 }
