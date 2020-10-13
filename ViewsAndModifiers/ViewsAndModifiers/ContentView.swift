@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var userRedText: Bool = false
+
     var body: some View {
         VStack {
             Text("Hello, world!")
@@ -9,14 +12,14 @@ struct ContentView: View {
 
 
             Button(action: {
-                print(type(of: self.body))
+                userRedText.toggle()
             }) {
                 Text("Hello button!")
                     .fontWeight(.bold)
                     .font(.title)
             }
             .frame(width: 200, height: 200)
-            .background(Color.red)
+            .background(userRedText ? Color.red : Color.blue)
             .foregroundColor(.white)
 
             Text("Hello World")
