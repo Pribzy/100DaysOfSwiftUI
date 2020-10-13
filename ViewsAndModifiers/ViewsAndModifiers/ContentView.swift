@@ -8,7 +8,6 @@ struct ContentView: View {
         VStack {
             Text("Hello, world!")
                 .background(Color.red)
-                .edgesIgnoringSafeArea(.all)
 
 
             Button(action: {
@@ -31,6 +30,17 @@ struct ContentView: View {
                 .background(Color.green)
                 .padding()
                 .background(Color.yellow)
+
+            VStack {
+                Text("Gryffindor")
+                    .font(.largeTitle)
+
+                Text("Hufflepuff")
+                Text("Ravenclaw")
+                Text("Slytherin")
+            }
+            .font(.title)
+            .blur(radius: 5)
         }
     }
 }
