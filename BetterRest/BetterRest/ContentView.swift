@@ -5,7 +5,7 @@ struct ContentView: View {
 
     @State private var sleepAmount: Double = 8.0
     @State private var wakeUp: Date = defaultWakeTime
-    @State private var coffeeAmount: Int = 1
+    @State private var coffeeAmount: Int = 0
 
     @State private var alertTitle: String = ""
     @State private var alertMessage: String = ""
@@ -36,17 +36,20 @@ struct ContentView: View {
                 }
 
                 Section(header: Text("Daily coffee intake")) {
-                    Stepper(value: $coffeeAmount, in: 1...20) {
-                        coffeeAmount == 1 ? Text("1 cup") : Text("\(coffeeAmount) cups")
+                    Picker(selection: $coffeeAmount, label: Text("")) {
+                        ForEach(1..<20) {
+                            Text("\($0)")
+                        }
                     }
-                    .navigationTitle(Text("BetterRest"))
-                    .navigationBarItems(trailing:
-                                            Button(action: calculateBedtime) {
-                                                Text("Calculate")
-                                            }
-                    )
+                    .pickerStyle(WheelPickerStyle())
                 }
             }
+            .navigationTitle(Text("BetterRest"))
+            .navigationBarItems(trailing:
+                                    Button(action: calculateBedtime) {
+                                        Text("Calculate")
+                                    }
+            )
             .navigationBarTitleDisplayMode(.inline)
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
