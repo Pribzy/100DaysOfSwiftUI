@@ -1,16 +1,15 @@
-//
-//  ContentView.swift
-//  BetterRest
-//
-//  Created by Pribelszki Levente on 2020. 10. 14..
-//
-
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var sleepAmount: Double = 8.0
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Form {
+            Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
+                Text("\(sleepAmount, specifier: "%g") hours")
+            }
+        }
     }
 }
 
