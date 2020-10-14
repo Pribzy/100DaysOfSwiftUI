@@ -4,47 +4,59 @@ import SwiftUI
 struct ContentView: View {
 
     @State private var sleepAmount: Double = 8.0
-    @State private var wakeUp: Date = Date()
+    @State private var wakeUp: Date = defaultWakeTime
     @State private var coffeeAmount: Int = 1
 
     @State private var alertTitle: String = ""
     @State private var alertMessage: String = ""
     @State private var showingAlert: Bool = false
 
+    static var defaultWakeTime: Date {
+        var components = DateComponents()
+        components.hour = 7
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? Date()
+    }
+
     var body: some View {
         NavigationView {
-            VStack {
-                Text("When do you want to wake up?")
-                    .font(.headline)
+            Form {
+                VStack(alignment: .leading) {
+                    Text("When do you want to wake up?")
+                        .font(.headline)
 
-                DatePicker("Please enter a time",
-                           selection: $wakeUp,
-                           displayedComponents: .hourAndMinute)
-                    .labelsHidden()
-                    .datePickerStyle(GraphicalDatePickerStyle())
-                    .padding([.leading, .trailing])
+                    DatePicker("Please enter a time",
+                               selection: $wakeUp,
+                               displayedComponents: .hourAndMinute)
+                        .labelsHidden()
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                }
 
-                Text("Desired amount of sleep")
-                    .font(.headline)
+                VStack(alignment: .leading) {
+                    Text("Desired amount of sleep")
+                        .font(.headline)
 
-                Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
-                    Text("\(sleepAmount, specifier: "%g") hours")
-                }.padding([.leading, .trailing])
+                    Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
+                        Text("\(sleepAmount, specifier: "%g") hours")
+                    }
+                }
 
-                Text("Daily coffee intake")
-                    .font(.headline)
+                VStack(alignment: .leading) {
+                    Text("Daily coffee intake")
+                        .font(.headline)
 
-                Stepper(value: $coffeeAmount, in: 1...20) {
-                    coffeeAmount == 1 ? Text("1 cup") : Text("\(coffeeAmount) cups")
-                }.padding([.leading, .trailing])
-                .navigationTitle(Text("BetterRest"))
-                .navigationBarItems(trailing:
-                                        Button(action: calculateBedtime) {
-                                            Text("Calculate")
-                                        }
-                )
+                    Stepper(value: $coffeeAmount, in: 1...20) {
+                        coffeeAmount == 1 ? Text("1 cup") : Text("\(coffeeAmount) cups")
+                    }
+                    .navigationTitle(Text("BetterRest"))
+                    .navigationBarItems(trailing:
+                                            Button(action: calculateBedtime) {
+                                                Text("Calculate")
+                                            }
+                    )
+                }
             }
-            .padding()
+            .navigationBarTitleDisplayMode(.inline)
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
