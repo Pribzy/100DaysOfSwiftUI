@@ -1,3 +1,4 @@
+import CoreML
 import SwiftUI
 
 struct ContentView: View {
@@ -5,6 +6,10 @@ struct ContentView: View {
     @State private var sleepAmount: Double = 8.0
     @State private var wakeUp: Date = Date()
     @State private var coffeeAmount: Int = 1
+
+    @State private var alertTitle: String = ""
+    @State private var alertMessage: String = ""
+    @State private var showingAlert: Bool = false
 
     var body: some View {
         NavigationView {
@@ -40,11 +45,36 @@ struct ContentView: View {
                 )
             }
             .padding()
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
         }
     }
 
     private func calculateBedtime() {
+        let components = Calendar.current.dateComponents([.hour, .minute], from: wakeUp)
+        let hour = (components.hour ?? 0) * 60 * 60
+        let minute = (components.minute ?? 0) * 60
+
+        do {
+            let model: SleepCalculator = try SleepCalculator(configuration: MLModelConfiguration())
+            let prediction = try model.prediction(wake: Double(hour + minute),
+                                                  estimatedSleep: sleepAmount,
+                                                  coffee: Double(coffeeAmount))
+            let sleepTime = wakeUp - prediction.actualSleep
+            let formatter = DateFormatter()
+            formatter.timeStyle = .short
+
+            alertMessage = formatter.string(from: sleepTime)
+            alertTitle = "Your ideal bedtime is…"
+
+        } catch {
+            alertTitle = "Error"
+            alertMessage = "Sorry, there was a problem calculating your bedtime."
+        }
+        showingAlert = true
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
