@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		348AAF9D2539B0E800DF7F8E /* StringExpert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AAF9C2539B0E800DF7F8E /* StringExpert.swift */; };
+		348AAFA02539E2FD00DF7F8E /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 348AAF9F2539E2FD00DF7F8E /* start.txt */; };
 		34EB540F253842CF001A5D3E /* WordScrambleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EB540E253842CF001A5D3E /* WordScrambleApp.swift */; };
 		34EB5411253842CF001A5D3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EB5410253842CF001A5D3E /* ContentView.swift */; };
 		34EB5413253842D2001A5D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34EB5412253842D2001A5D3E /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		348AAF9C2539B0E800DF7F8E /* StringExpert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExpert.swift; sourceTree = "<group>"; };
+		348AAF9F2539E2FD00DF7F8E /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		34EB540B253842CF001A5D3E /* WordScramble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordScramble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EB540E253842CF001A5D3E /* WordScrambleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleApp.swift; sourceTree = "<group>"; };
 		34EB5410253842CF001A5D3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		34EB540D253842CF001A5D3E /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
+				348AAF9F2539E2FD00DF7F8E /* start.txt */,
 				34EB540E253842CF001A5D3E /* WordScrambleApp.swift */,
 				34EB5410253842CF001A5D3E /* ContentView.swift */,
 				34EB5412253842D2001A5D3E /* Assets.xcassets */,
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34EB5416253842D2001A5D3E /* Preview Assets.xcassets in Resources */,
+				348AAFA02539E2FD00DF7F8E /* start.txt in Resources */,
 				34EB5413253842D2001A5D3E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
