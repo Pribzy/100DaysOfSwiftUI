@@ -29,6 +29,10 @@ struct ContentView: View {
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
+            .navigationBarItems(trailing:
+                                    Button(action: restartGame) {
+                                        Text("Restart")
+                                    })
         }
     }
 }
@@ -52,6 +56,11 @@ extension ContentView {
 
         // If were are *here* then there was a problem – trigger a crash and report the error
         fatalError("Could not load start.txt from bundle.")
+    }
+
+    func restartGame() {
+        usedWords = []
+        startGame()
     }
 
     private func addNewWord() {
@@ -87,7 +96,7 @@ extension ContentView {
         newWord = ""
     }
 
-   private func isOriginal(word: String) -> Bool {
+    private func isOriginal(word: String) -> Bool {
         !usedWords.contains(word)
     }
 
