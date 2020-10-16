@@ -2,18 +2,43 @@ import SwiftUI
 
 struct ContentView: View {
 
-    let people = ["Finn", "Leia", "Luke", "Rey"]
+    @State private var usedWords = [String]()
+    @State private var rootWord = ""
+    @State private var newWord = ""
 
     var body: some View {
+        NavigationView {
+            VStack {
+                TextField("Enter your word", text: $newWord, onCommit: addNewWord)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .autocapitalization(.none)
 
-        if let fileURL = Bundle.main.url(forResource: "some-file", withExtension: "txt"),
-           let fileContents = try? String(contentsOf: fileURL) {
-            // we found the file in our bundle!
+                List(usedWords, id: \.self) {
+                    Image(systemName: "\($0.count).circle")
+                    Text($0)
+                }
+                .listStyle(InsetGroupedListStyle())
+            }
+            .navigationBarTitle(rootWord)
+        }
+    }
+}
+
+extension ContentView {
+    private func addNewWord() {
+        // lowercase and trim the word, to make sure we don't add duplicate words with case differences
+        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+
+        // exit if the remaining string is empty
+        guard answer.count > 0 else {
+            return
         }
 
-        List(people, id: \.self) {
-            Text($0)
-        }
+        // extra validation to come
+
+        usedWords.insert(answer, at: 0)
+        newWord = ""
     }
 }
 
