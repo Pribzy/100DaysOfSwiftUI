@@ -78,6 +78,11 @@ extension ContentView {
             return
         }
 
+        guard isNotSame(word: answer) else {
+            wordError(title: "Word not possible", message: "That can't be the original word.")
+            return
+        }
+
         usedWords.insert(answer, at: 0)
         newWord = ""
     }
@@ -101,12 +106,18 @@ extension ContentView {
     }
 
     func isReal(word: String) -> Bool {
+        if word.count < 3 {
+            return false
+        }
+
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
 
         return misspelledRange.location == NSNotFound
     }
+
+    func isNotSame(word: String) -> Bool { !word.elementsEqual(rootWord) }
 
     func wordError(title: String, message: String) {
         errorTitle = title
