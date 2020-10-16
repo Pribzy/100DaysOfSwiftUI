@@ -61,6 +61,10 @@ extension ContentView {
         usedWords.insert(answer, at: 0)
         newWord = ""
     }
+
+   private func isOriginal(word: String) -> Bool {
+        !usedWords.contains(word)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
