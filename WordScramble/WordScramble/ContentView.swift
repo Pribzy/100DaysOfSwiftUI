@@ -6,6 +6,8 @@ struct ContentView: View {
     @State private var rootWord = ""
     @State private var newWord = ""
 
+    private var score: Int { usedWords.compactMap { $0.count }.reduce(0, +) }
+
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
@@ -17,6 +19,10 @@ struct ContentView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .autocapitalization(.none)
+
+                Text("Score is \(score).")
+                    .font(.title2)
+                    .fontWeight(.bold)
 
                 List(usedWords, id: \.self) {
                     Image(systemName: "\($0.count).circle")
