@@ -11,6 +11,7 @@
 		348AAFC5253B58B800DF7F8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AAFC4253B58B800DF7F8E /* ContentView.swift */; };
 		348AAFC7253B58B900DF7F8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348AAFC6253B58B900DF7F8E /* Assets.xcassets */; };
 		348AAFCA253B58B900DF7F8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348AAFC9253B58B900DF7F8E /* Preview Assets.xcassets */; };
+		348AAFD4253B6CF900DF7F8E /* CornerRotateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AAFD3253B6CF900DF7F8E /* CornerRotateModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		348AAFC6253B58B900DF7F8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		348AAFC9253B58B900DF7F8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		348AAFCB253B58B900DF7F8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		348AAFD3253B6CF900DF7F8E /* CornerRotateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRotateModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				348AAFC6253B58B900DF7F8E /* Assets.xcassets */,
 				348AAFCB253B58B900DF7F8E /* Info.plist */,
 				348AAFC8253B58B900DF7F8E /* Preview Content */,
+				348AAFD3253B6CF900DF7F8E /* CornerRotateModifier.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				348AAFC5253B58B800DF7F8E /* ContentView.swift in Sources */,
+				348AAFD4253B6CF900DF7F8E /* CornerRotateModifier.swift in Sources */,
 				348AAFC3253B58B800DF7F8E /* AnimationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -163,7 +163,14 @@ struct TransitionAnimations: View {
     }
 }
 
-struct TransitionAnimations_Previews: PreviewProvider {
+struct CustomTransitions: View {
+    @State private var isShowingRed: Bool = false
+    var body: some View {
+        Text("")
+    }
+}
+
+struct CustomTransitions_Previews: PreviewProvider {
     static var previews: some View {
         TransitionAnimations()
     }
