@@ -14,7 +14,10 @@ struct ContentView: View {
         .clipShape(Circle())
         .scaleEffect(animationAmount)
         .blur(radius: (animationAmount - 1) * 3)
-        .animation(.default)
+        .animation(
+                Animation.easeInOut(duration: 2)
+                    .delay(1)
+        )
     }
 }
 
