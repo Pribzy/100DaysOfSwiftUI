@@ -31,15 +31,13 @@ struct GuessTheFlag: View {
 
                 ForEach(0 ..< 3) { number in
                     Button(action: {
-                        withAnimation(.easeOut(duration: 1)) {
-                            flagTapped(number)
-                        }
+                        flagTapped(number)
                     },
                     label: {
                         FlagImage(imageName: countries[number])
                     })
-                    .rotation3DEffect(number == correctAnswer && animateCorrectAnswer ? .degrees(180) : .degrees(0),
-                                      axis: (x: 0, y: 1, z: 0))
+                    .offset(x: animateWrongAnswer ? -10 : 0)
+                    .rotation3DEffect(number == correctAnswer && animateCorrectAnswer ? .degrees(180) : .degrees(0), axis: (x: 0, y: 1, z: 0))
                     .opacity(number != correctAnswer && animateCorrectAnswer ? 0.25 : 1)
                 }
                 Spacer()
@@ -56,11 +54,19 @@ struct GuessTheFlag: View {
         if number == correctAnswer {
             scoreTitle = "Correct"
             actualScore += 1
-            animateCorrectAnswer = true
+            withAnimation(.easeOut(duration: 1)) {
+                animateCorrectAnswer = true
+            }
         } else {
             scoreTitle = "Wrong! The correct answer was \(countries[correctAnswer])."
             actualScore -= actualScore == 0 ? 0 : 1
-            animateWrongAnswer = true
+            withAnimation(
+                Animation.default
+                    .repeatForever()
+                    .speed(2)
+            ) {
+                animateWrongAnswer = true
+            }
         }
 
         showingScore = true
@@ -68,7 +74,9 @@ struct GuessTheFlag: View {
 
     func askQuestion() {
         animateCorrectAnswer = false
-        animateWrongAnswer = false
+        withAnimation {
+            animateWrongAnswer = false
+        }
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
     }
