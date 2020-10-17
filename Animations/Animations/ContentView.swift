@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var animationAmount: CGFloat = 1
-    
+
     var body: some View {
         Button("Tap Me") {
             // self.animationAmount += 1
@@ -25,7 +25,7 @@ struct ContentView: View {
             self.animationAmount = 2
         }
     }
-    
+
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -36,7 +36,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct AnimatingBindings: View {
     @State private var animationAmount: CGFloat = 1
-    
+
     var body: some View {
         print(animationAmount)
         return VStack {
@@ -44,9 +44,9 @@ struct AnimatingBindings: View {
                 Animation.easeInOut(duration: 1)
                     .repeatCount(3, autoreverses: true)
             ), in: 1...10)
-            
+
             Spacer()
-            
+
             Button("Tap Me") {
                 self.animationAmount += 1
             }
@@ -62,5 +62,29 @@ struct AnimatingBindings: View {
 struct AnimatingBindings_Previews: PreviewProvider {
     static var previews: some View {
         AnimatingBindings()
+    }
+}
+
+struct ExplicitAnimation: View {
+    @State private var animationAmount = 0.0
+
+    var body: some View {
+        Button("Tap Me") {
+            withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
+                animationAmount += 360
+            }
+        }
+        .padding(50)
+        .background(Color.red)
+        .foregroundColor(.white)
+        .clipShape(Circle())
+        .rotation3DEffect(.degrees(animationAmount),
+                          axis: (x: 0, y: 1, z: 0))
+    }
+}
+
+struct ExplicitAnimation_Previews: PreviewProvider {
+    static var previews: some View {
+        ExplicitAnimation()
     }
 }
