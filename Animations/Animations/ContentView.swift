@@ -166,7 +166,19 @@ struct TransitionAnimations: View {
 struct CustomTransitions: View {
     @State private var isShowingRed: Bool = false
     var body: some View {
-        Text("")
+        VStack {
+            Button("Tap Me") {
+                withAnimation {
+                    isShowingRed.toggle()
+                }
+            }
+            if isShowingRed {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 200, height: 200)
+                    .transition(.pivot)
+            }
+        }
     }
 }
 
