@@ -8,6 +8,7 @@ struct GuessTheFlag: View {
     @State private var scoreTitle = ""
 
     @State private var actualScore: Int = 0
+    @State private var animateCorrectAnswer = false
 
     var body: some View {
         ZStack {
@@ -29,11 +30,15 @@ struct GuessTheFlag: View {
 
                 ForEach(0 ..< 3) { number in
                     Button(action: {
-                        flagTapped(number)
+                        withAnimation(.easeOut(duration: 1)) {
+                            flagTapped(number)
+                        }
                     },
                     label: {
                         FlagImage(imageName: countries[number])
                     })
+                    .rotation3DEffect(number == correctAnswer && animateCorrectAnswer ? .degrees(180) : .degrees(0),
+                                      axis: (x: 0, y: 1, z: 0))
                 }
                 Spacer()
             }
@@ -49,6 +54,7 @@ struct GuessTheFlag: View {
         if number == correctAnswer {
             scoreTitle = "Correct"
             actualScore += 1
+            animateCorrectAnswer = true
         } else {
             scoreTitle = "Wrong! The correct answer was \(countries[correctAnswer])."
             actualScore -= actualScore == 0 ? 0 : 1
@@ -58,6 +64,7 @@ struct GuessTheFlag: View {
     }
 
     func askQuestion() {
+        animateCorrectAnswer = false
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
     }
