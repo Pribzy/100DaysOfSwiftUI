@@ -14,6 +14,7 @@
 		347938A32546BD3D00D6FDAF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938A22546BD3D00D6FDAF /* Question.swift */; };
 		347938A82547281B00D6FDAF /* LevelGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938A72547281B00D6FDAF /* LevelGridView.swift */; };
 		347938AC2547295A00D6FDAF /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938AB2547295A00D6FDAF /* CollectionExtension.swift */; };
+		347938B0254729A000D6FDAF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938AF254729A000D6FDAF /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		347938A22546BD3D00D6FDAF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		347938A72547281B00D6FDAF /* LevelGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelGridView.swift; sourceTree = "<group>"; };
 		347938AB2547295A00D6FDAF /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		347938AF254729A000D6FDAF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				347938A22546BD3D00D6FDAF /* Question.swift */,
 				347938A72547281B00D6FDAF /* LevelGridView.swift */,
 				347938AB2547295A00D6FDAF /* CollectionExtension.swift */,
+				347938AF254729A000D6FDAF /* GameView.swift */,
 			);
 			path = Edutainment;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				347938A82547281B00D6FDAF /* LevelGridView.swift in Sources */,
 				34793894254060D900D6FDAF /* ContentView.swift in Sources */,
 				347938AC2547295A00D6FDAF /* CollectionExtension.swift in Sources */,
+				347938B0254729A000D6FDAF /* GameView.swift in Sources */,
 				34793892254060D900D6FDAF /* EdutainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
