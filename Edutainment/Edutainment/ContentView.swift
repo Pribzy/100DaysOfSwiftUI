@@ -49,23 +49,6 @@ struct AnswerView: View {
     }
 }
 
-struct QuestionView: View {
-
-    var currentQuestion: String
-
-    var body: some View {
-        Group {
-            Text(currentQuestion)
-                .padding()
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                .background(Color.gray.opacity(0.3))
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .font(.title)
-        }
-        .padding()
-    }
-}
-
 struct SetupView: View {
 
     var questionCounts: [String]
