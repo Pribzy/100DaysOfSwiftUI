@@ -13,6 +13,7 @@
 		34793899254060DB00D6FDAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34793898254060DB00D6FDAF /* Preview Assets.xcassets */; };
 		347938A32546BD3D00D6FDAF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938A22546BD3D00D6FDAF /* Question.swift */; };
 		347938A82547281B00D6FDAF /* LevelGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938A72547281B00D6FDAF /* LevelGridView.swift */; };
+		347938AC2547295A00D6FDAF /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938AB2547295A00D6FDAF /* CollectionExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3479389A254060DB00D6FDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347938A22546BD3D00D6FDAF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		347938A72547281B00D6FDAF /* LevelGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelGridView.swift; sourceTree = "<group>"; };
+		347938AB2547295A00D6FDAF /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				34793897254060DB00D6FDAF /* Preview Content */,
 				347938A22546BD3D00D6FDAF /* Question.swift */,
 				347938A72547281B00D6FDAF /* LevelGridView.swift */,
+				347938AB2547295A00D6FDAF /* CollectionExtension.swift */,
 			);
 			path = Edutainment;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				347938A32546BD3D00D6FDAF /* Question.swift in Sources */,
 				347938A82547281B00D6FDAF /* LevelGridView.swift in Sources */,
 				34793894254060D900D6FDAF /* ContentView.swift in Sources */,
+				347938AC2547295A00D6FDAF /* CollectionExtension.swift in Sources */,
 				34793892254060D900D6FDAF /* EdutainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

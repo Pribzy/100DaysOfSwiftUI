@@ -29,10 +29,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-extension Collection {
-    func choose(_ n: Int?) -> ArraySlice<Element> { shuffled().prefix(n ?? count) }
-}
-
 struct AnswerView: View {
 
     @Binding var correctAnswer: Int
