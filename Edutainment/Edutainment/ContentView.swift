@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Edutainment
-//
-//  Created by Pribelszki Levente on 2020. 10. 21..
-//
-
 import SwiftUI
 
 struct ContentView: View {
