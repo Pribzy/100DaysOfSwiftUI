@@ -1,6 +1,18 @@
 import Foundation
 
 struct Question {
-    var question: String
-    var answer: String
+    var first: Int
+    var second: Int
+
+    var answer: Int {
+        return first * second
+    }
+
+    var questionString: String {
+        return "\(first)x\(second)"
+    }
+
+    var answerString: String {
+        return "\(answer)"
+    }
 }
