@@ -2,10 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
 
-    // MARK: - Properties
     private var questionCounts: [String] = ["5", "10", "20", "All"]
 
-    // MARK: - State properties
     @State private var selectedLevel: Int = 0
     @State private var selectedQuestionCount: Int = 0
     @State private var isStartGame: Bool = false
@@ -28,35 +26,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct LevelView: View {
-
-    @Binding var selectedLevel: Int
-
-    var body: some View {
-        VStack {
-            ForEach(1..<4) { row in
-                HStack{
-                    ForEach(1..<5) { column in
-                        let item = column+(row*4)-4
-                        Button(action: {
-                            selectedLevel = item
-                        }, label: {
-                            Text("\(item)")
-                                .bold()
-                                .accentColor(.black)
-                                .padding()
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                        })
-                        .background(selectedLevel == item ? Color.yellow.opacity(0.3) : Color.gray.opacity(0.3))
-                        .cornerRadius(10)
-                    }
-                }
-            }
-        }
-        .padding()
     }
 }
 
@@ -114,7 +83,7 @@ struct SetupView: View {
             Text("Select level")
                 .font(.title)
 
-            LevelView(selectedLevel: $selectedLevel)
+            LevelGridView(selectedLevel: $selectedLevel)
 
             Text("Question Count")
                 .font(.title)

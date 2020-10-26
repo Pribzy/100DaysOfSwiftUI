@@ -12,6 +12,7 @@
 		34793896254060DB00D6FDAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34793895254060DB00D6FDAF /* Assets.xcassets */; };
 		34793899254060DB00D6FDAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34793898254060DB00D6FDAF /* Preview Assets.xcassets */; };
 		347938A32546BD3D00D6FDAF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938A22546BD3D00D6FDAF /* Question.swift */; };
+		347938A82547281B00D6FDAF /* LevelGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938A72547281B00D6FDAF /* LevelGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		34793898254060DB00D6FDAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3479389A254060DB00D6FDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347938A22546BD3D00D6FDAF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		347938A72547281B00D6FDAF /* LevelGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				3479389A254060DB00D6FDAF /* Info.plist */,
 				34793897254060DB00D6FDAF /* Preview Content */,
 				347938A22546BD3D00D6FDAF /* Question.swift */,
+				347938A72547281B00D6FDAF /* LevelGridView.swift */,
 			);
 			path = Edutainment;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				347938A32546BD3D00D6FDAF /* Question.swift in Sources */,
+				347938A82547281B00D6FDAF /* LevelGridView.swift in Sources */,
 				34793894254060D900D6FDAF /* ContentView.swift in Sources */,
 				34793892254060D900D6FDAF /* EdutainmentApp.swift in Sources */,
 			);
