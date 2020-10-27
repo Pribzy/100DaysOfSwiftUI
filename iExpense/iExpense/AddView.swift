@@ -7,7 +7,9 @@ struct AddView: View {
     @State private var type = types[0]
     @State private var amount = ""
 
-    static let types = ["Business", "Personal"]
+    @Environment(\.presentationMode) var presentationMode
+
+    static let types = ["Personal", "Business"]
 
     var body: some View {
         NavigationView {
@@ -22,6 +24,17 @@ struct AddView: View {
                     .keyboardType(.numberPad)
             }
             .navigationBarTitle("Add new expense")
+            .navigationBarItems(trailing: Button("Save") {
+                addItem(amount: amount, name: name, type: type)
+                presentationMode.wrappedValue.dismiss()
+            })
+        }
+    }
+
+    private func addItem(amount: String, name: String, type: String) {
+        if let actualAmount = Int(amount) {
+            let item = ExpenseItem(name: name, type:type, amount: actualAmount)
+            self.expenses.items.append(item)
         }
     }
 }
