@@ -13,6 +13,7 @@
 		347938C925484D1900D6FDAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347938C825484D1900D6FDAF /* Assets.xcassets */; };
 		347938CC25484D1900D6FDAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347938CB25484D1900D6FDAF /* Preview Assets.xcassets */; };
 		347938CF25484D1900D6FDAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347938CD25484D1900D6FDAF /* LaunchScreen.storyboard */; };
+		347938D825485FB900D6FDAF /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938D725485FB900D6FDAF /* ExpenseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		347938CB25484D1900D6FDAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		347938CE25484D1900D6FDAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		347938D025484D1900D6FDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347938D725485FB900D6FDAF /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				347938CD25484D1900D6FDAF /* LaunchScreen.storyboard */,
 				347938D025484D1900D6FDAF /* Info.plist */,
 				347938CA25484D1900D6FDAF /* Preview Content */,
+				347938D725485FB900D6FDAF /* ExpenseView.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				347938C325484D1400D6FDAF /* AppDelegate.swift in Sources */,
 				347938C525484D1400D6FDAF /* SceneDelegate.swift in Sources */,
 				347938C725484D1400D6FDAF /* ContentView.swift in Sources */,
+				347938D825485FB900D6FDAF /* ExpenseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
