@@ -56,3 +56,38 @@ struct SecondView: View {
         }
     }
 }
+
+struct DeleteView: View {
+    @State private var numbers = [Int]()
+    @State private var currentNumber = 1
+
+    var body: some View {
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(numbers, id: \.self) {
+                        Text("\($0)")
+                    }
+                    .onDelete(perform: removeRows)
+                }
+                .listStyle(InsetGroupedListStyle())
+
+                Button("Add Number") {
+                    self.numbers.append(currentNumber)
+                    self.currentNumber += 1
+                }
+            }
+            .navigationBarItems(leading: EditButton())
+        }
+    }
+
+    func removeRows(at offsets: IndexSet) {
+        numbers.remove(atOffsets: offsets)
+    }
+}
+
+struct DeleteView_Previews: PreviewProvider {
+    static var previews: some View {
+        DeleteView()
+    }
+}
