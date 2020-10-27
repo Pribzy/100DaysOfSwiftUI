@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct AddView: View {
+    @ObservedObject var expenses: Expenses
+
     @State private var name = ""
-    @State private var type = "Personal"
+    @State private var type = types[0]
     @State private var amount = ""
 
     static let types = ["Business", "Personal"]
@@ -26,6 +28,6 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView()
+        AddView(expenses: Expenses())
     }
 }
