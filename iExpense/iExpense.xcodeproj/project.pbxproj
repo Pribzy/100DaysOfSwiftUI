@@ -14,6 +14,7 @@
 		347938CC25484D1900D6FDAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347938CB25484D1900D6FDAF /* Preview Assets.xcassets */; };
 		347938CF25484D1900D6FDAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347938CD25484D1900D6FDAF /* LaunchScreen.storyboard */; };
 		347938D825485FB900D6FDAF /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938D725485FB900D6FDAF /* ExpenseView.swift */; };
+		347938DB254866D500D6FDAF /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938DA254866D500D6FDAF /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		347938CE25484D1900D6FDAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		347938D025484D1900D6FDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347938D725485FB900D6FDAF /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
+		347938DA254866D500D6FDAF /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				347938D025484D1900D6FDAF /* Info.plist */,
 				347938CA25484D1900D6FDAF /* Preview Content */,
 				347938D725485FB900D6FDAF /* ExpenseView.swift */,
+				347938DA254866D500D6FDAF /* AddView.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				347938C325484D1400D6FDAF /* AppDelegate.swift in Sources */,
 				347938C525484D1400D6FDAF /* SceneDelegate.swift in Sources */,
+				347938DB254866D500D6FDAF /* AddView.swift in Sources */,
 				347938C725484D1400D6FDAF /* ContentView.swift in Sources */,
 				347938D825485FB900D6FDAF /* ExpenseView.swift in Sources */,
 			);
