@@ -6,6 +6,7 @@ struct AddView: View {
     @State private var name = ""
     @State private var type = types[0]
     @State private var amount = ""
+    @State private var isValidationPresented = false
 
     @Environment(\.presentationMode) var presentationMode
 
@@ -26,15 +27,23 @@ struct AddView: View {
             .navigationBarTitle("Add new expense")
             .navigationBarItems(trailing: Button("Save") {
                 addItem(amount: amount, name: name, type: type)
-                presentationMode.wrappedValue.dismiss()
             })
+        }
+        .alert(isPresented: $isValidationPresented) {
+            Alert(title: Text("Amount must be a number"),
+                  message: Text("Please add only numbers to amount field."),
+                  dismissButton: .cancel())
         }
     }
 
     private func addItem(amount: String, name: String, type: String) {
         if let actualAmount = Int(amount) {
+            isValidationPresented = false
             let item = ExpenseItem(name: name, type:type, amount: actualAmount)
             self.expenses.items.append(item)
+            presentationMode.wrappedValue.dismiss()
+        } else {
+            isValidationPresented = true
         }
     }
 }
