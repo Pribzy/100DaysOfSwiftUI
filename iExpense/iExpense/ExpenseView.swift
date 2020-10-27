@@ -39,16 +39,7 @@ struct ExpenseView: View {
         NavigationView {
             List {
                 ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
-                        }
-
-                        Spacer()
-                        Text("$\(item.amount)")
-                    }
+                    ExpenseItemView(name: item.name, type: item.type, amount: item.amount)
                 }
                 .onDelete(perform: removeItems)
             }
@@ -76,5 +67,26 @@ struct ExpenseView: View {
 struct ExpenseView_Previews: PreviewProvider {
     static var previews: some View {
         ExpenseView()
+    }
+}
+
+struct ExpenseItemView: View {
+
+    var name: String
+    var type: String
+    var amount: Int
+
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text(name)
+                    .font(.headline)
+                Text(type)
+            }
+            Spacer()
+            Text("$\(amount)")
+                .bold()
+                .expensed(with: amount)
+        }
     }
 }

@@ -15,6 +15,7 @@
 		347938CF25484D1900D6FDAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347938CD25484D1900D6FDAF /* LaunchScreen.storyboard */; };
 		347938D825485FB900D6FDAF /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938D725485FB900D6FDAF /* ExpenseView.swift */; };
 		347938DB254866D500D6FDAF /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938DA254866D500D6FDAF /* AddView.swift */; };
+		347938DE254870F500D6FDAF /* AmountModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347938DD254870F500D6FDAF /* AmountModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		347938D025484D1900D6FDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347938D725485FB900D6FDAF /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 		347938DA254866D500D6FDAF /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		347938DD254870F500D6FDAF /* AmountModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				347938CA25484D1900D6FDAF /* Preview Content */,
 				347938D725485FB900D6FDAF /* ExpenseView.swift */,
 				347938DA254866D500D6FDAF /* AddView.swift */,
+				347938DD254870F500D6FDAF /* AmountModifier.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				347938C525484D1400D6FDAF /* SceneDelegate.swift in Sources */,
 				347938DB254866D500D6FDAF /* AddView.swift in Sources */,
 				347938C725484D1400D6FDAF /* ContentView.swift in Sources */,
+				347938DE254870F500D6FDAF /* AmountModifier.swift in Sources */,
 				347938D825485FB900D6FDAF /* ExpenseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
