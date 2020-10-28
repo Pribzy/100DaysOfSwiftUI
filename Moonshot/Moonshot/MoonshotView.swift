@@ -2,10 +2,11 @@ import SwiftUI
 
 struct MoonshotView: View {
     let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
+    let missions: [Mission] = Bundle.main.decode("missions.json")
 
     var body: some View {
-        List(astronauts) { astronaut in
-            Text(astronaut.name)
+        List(missions) { mission in
+            Text(mission.crew[0].name)
         }
     }
 }
