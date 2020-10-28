@@ -4,10 +4,10 @@ struct ImageResizeView: View {
     var body: some View {
         VStack {
             GeometryReader { geo in
-            Image("aldrin")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: geo.size.width, height: geo.size.height)
+                Image("aldrin")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geo.size.width, height: geo.size.height)
             }
         }
     }
@@ -40,9 +40,21 @@ struct CustomText: View {
     }
 }
 
+struct NavigationLinkView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                NavigationLink(destination: Text("Detail View")) {
+                    Text("Hello World")
+                }
+            }
+            .navigationBarTitle("SwiftUI")
+        }
+    }
+}
+
 struct Previews: PreviewProvider {
     static var previews: some View {
-        ImageResizeView()
-        ScrollExampleView()
+        NavigationLinkView()
     }
 }
