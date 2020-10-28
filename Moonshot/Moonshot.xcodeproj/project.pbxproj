@@ -20,6 +20,7 @@
 		3401F4032549793000CC6CBC /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401F4022549793000CC6CBC /* Astronaut.swift */; };
 		3401F40B254979F000CC6CBC /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401F40A254979F000CC6CBC /* Bundle-Decodable.swift */; };
 		3401F40F25497ABF00CC6CBC /* MoonshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401F40E25497ABF00CC6CBC /* MoonshotView.swift */; };
+		3401F41225497BCB00CC6CBC /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401F41125497BCB00CC6CBC /* Mission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3401F4022549793000CC6CBC /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		3401F40A254979F000CC6CBC /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		3401F40E25497ABF00CC6CBC /* MoonshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotView.swift; sourceTree = "<group>"; };
+		3401F41125497BCB00CC6CBC /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				3401F3F5254975CE00CC6CBC /* User.swift */,
 				3401F3F9254975E500CC6CBC /* Address.swift */,
 				3401F4022549793000CC6CBC /* Astronaut.swift */,
+				3401F41125497BCB00CC6CBC /* Mission.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				3401F4032549793000CC6CBC /* Astronaut.swift in Sources */,
 				3401F3E4254967A900CC6CBC /* ContentView.swift in Sources */,
 				3401F40B254979F000CC6CBC /* Bundle-Decodable.swift in Sources */,
+				3401F41225497BCB00CC6CBC /* Mission.swift in Sources */,
 				3401F3FA254975E500CC6CBC /* Address.swift in Sources */,
 				3401F40F25497ABF00CC6CBC /* MoonshotView.swift in Sources */,
 			);
