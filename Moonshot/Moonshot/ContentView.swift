@@ -1,14 +1,20 @@
 import SwiftUI
 
-struct ContentView: View {
+struct ImageResizeView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            GeometryReader { geo in
+            Image("aldrin")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: geo.size.width, height: geo.size.height)
+            }
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ImageResizeView()
     }
 }
