@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Moonshot
-//
-//  Created by Pribelszki Levente on 2020. 10. 28..
-//
-
 import SwiftUI
 
 struct ContentView: View {
