@@ -53,8 +53,26 @@ struct NavigationLinkView: View {
     }
 }
 
+struct ComplexCodableView: View {
+    var body: some View {
+        Button("Decode JSON") {
+            let input = """
+            {
+                "name": "Taylor Swift",
+                "address": {
+                    "street": "555, Taylor Swift Avenue",
+                    "city": "Nashville"
+                }
+            }
+            """
+
+            // more code to come
+        }
+    }
+}
+
 struct Previews: PreviewProvider {
     static var previews: some View {
-        NavigationLinkView()
+        ComplexCodableView()
     }
 }
