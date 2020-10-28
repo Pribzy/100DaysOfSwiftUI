@@ -17,6 +17,7 @@
 		3401F3FA254975E500CC6CBC /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401F3F9254975E500CC6CBC /* Address.swift */; };
 		3401F3FF254977D800CC6CBC /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3401F3FD254977D700CC6CBC /* missions.json */; };
 		3401F400254977D800CC6CBC /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3401F3FE254977D800CC6CBC /* astronauts.json */; };
+		3401F4032549793000CC6CBC /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3401F4022549793000CC6CBC /* Astronaut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3401F3F9254975E500CC6CBC /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		3401F3FD254977D700CC6CBC /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		3401F3FE254977D800CC6CBC /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
+		3401F4022549793000CC6CBC /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				3401F3F5254975CE00CC6CBC /* User.swift */,
 				3401F3F9254975E500CC6CBC /* Address.swift */,
+				3401F4022549793000CC6CBC /* Astronaut.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				3401F3F6254975CE00CC6CBC /* User.swift in Sources */,
 				3401F3E0254967A900CC6CBC /* AppDelegate.swift in Sources */,
 				3401F3E2254967A900CC6CBC /* SceneDelegate.swift in Sources */,
+				3401F4032549793000CC6CBC /* Astronaut.swift in Sources */,
 				3401F3E4254967A900CC6CBC /* ContentView.swift in Sources */,
 				3401F3FA254975E500CC6CBC /* Address.swift in Sources */,
 			);
