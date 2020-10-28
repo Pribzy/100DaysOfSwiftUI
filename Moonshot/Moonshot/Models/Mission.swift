@@ -25,4 +25,13 @@ struct Mission: Codable, Identifiable {
         formatter.dateStyle = .long
         return formatter.string(from: launchDate)
     }
+
+    var astronauts: [Astronaut] {
+        let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
+        return astronauts.filter { astronaut in
+            crew.contains { crewMember in
+                crewMember.name == astronaut.id
+            }
+        }
+    }
 }

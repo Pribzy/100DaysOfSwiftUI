@@ -4,6 +4,8 @@ struct MoonshotView: View {
     let astronauts: [Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
 
+    @State var isShowingAstronautNames = false
+
     var body: some View {
         NavigationView {
             List(missions) { mission in
@@ -15,11 +17,27 @@ struct MoonshotView: View {
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
                             .font(.headline)
-                        Text(mission.formattedLaunchDate)
+                        if isShowingAstronautNames {
+                            ForEach(mission.astronauts) { astronaut in
+                                VStack {
+                                    Text(astronaut.name)
+                                }
+                            }
+                            .transition(.opacity)
+                        } else {
+                            Text(mission.formattedLaunchDate)
+                        }
                     }
                 }
             }
+            .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Moonshot")
+            .navigationBarItems(trailing: Button("Switch") {
+                withAnimation {
+                    isShowingAstronautNames.toggle()
+                }
+            }
+            )
         }
     }
 }
