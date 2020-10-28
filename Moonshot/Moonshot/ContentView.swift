@@ -29,11 +29,11 @@ struct ScrollExampleView: View {
 
 struct CustomText: View {
     var text: String
-
+    
     var body: some View {
         Text(text)
     }
-
+    
     init(_ text: String) {
         print("Creating a new CustomText")
         self.text = text
@@ -43,9 +43,9 @@ struct CustomText: View {
 struct NavigationLinkView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                NavigationLink(destination: Text("Detail View")) {
-                    Text("Hello World")
+            List(0..<100) { row in
+                NavigationLink(destination: Text("Detail \(row)")) {
+                    Text("Row \(row)")
                 }
             }
             .navigationBarTitle("SwiftUI")
