@@ -4,6 +4,17 @@ struct Checkerboard: Shape {
     var rows: Int
     var columns: Int
 
+    public var animatableData: AnimatablePair<Double, Double> {
+        get {
+           AnimatablePair(Double(rows), Double(columns))
+        }
+
+        set {
+            self.rows = Int(newValue.first)
+            self.columns = Int(newValue.second)
+        }
+    }
+
     func path(in rect: CGRect) -> Path {
         var path = Path()
 
