@@ -182,11 +182,17 @@ struct SpiroGraphView: View {
 }
 
 struct ArrowView: View {
-    @State private var thickness = 4
+    @State private var thickness = 0.0
 
     var body: some View {
-        Arrow()
+        VStack {
+            Arrow(thickness: CGFloat(thickness))
             .fill(Color.red)
+
+            Text("Thickness: \(Int(thickness))")
+            Slider(value: $thickness, in: 0...0.5, step: 0.025)
+                .padding([.horizontal, .bottom])
+        }
     }
 }
 
