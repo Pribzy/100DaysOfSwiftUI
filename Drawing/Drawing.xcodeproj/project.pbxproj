@@ -68,6 +68,7 @@
 		34617CAF254FF96E0092E28B /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				34617CD7255015D20092E28B /* Shapes */,
 				34617CB0254FF96E0092E28B /* AppDelegate.swift */,
 				34617CB2254FF96E0092E28B /* SceneDelegate.swift */,
 				34617CB4254FF96E0092E28B /* ContentView.swift */,
@@ -75,12 +76,6 @@
 				34617CBB254FF96F0092E28B /* LaunchScreen.storyboard */,
 				34617CBE254FF96F0092E28B /* Info.plist */,
 				34617CB8254FF96F0092E28B /* Preview Content */,
-				34617CC5254FFF490092E28B /* Triangle.swift */,
-				34617CC8255000470092E28B /* Arc.swift */,
-				34617CCB2550054A0092E28B /* Flower.swift */,
-				34617CCE25500F300092E28B /* Trapezoid.swift */,
-				34617CD1255012AD0092E28B /* CheckerBoard.swift */,
-				34617CD4255014660092E28B /* Spirograph.swift */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -91,6 +86,19 @@
 				34617CB9254FF96F0092E28B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		34617CD7255015D20092E28B /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				34617CC5254FFF490092E28B /* Triangle.swift */,
+				34617CC8255000470092E28B /* Arc.swift */,
+				34617CCB2550054A0092E28B /* Flower.swift */,
+				34617CCE25500F300092E28B /* Trapezoid.swift */,
+				34617CD1255012AD0092E28B /* CheckerBoard.swift */,
+				34617CD4255014660092E28B /* Spirograph.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
