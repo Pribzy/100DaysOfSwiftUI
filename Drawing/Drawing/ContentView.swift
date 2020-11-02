@@ -21,9 +21,18 @@ struct TriangleView: View {
     }
 }
 
+struct ArcView: View {
+    var body: some View {
+        Arc(startAngle: .degrees(0), endAngle: .degrees(210), clockwise: true)
+            .fill(Color.gray)
+            .frame(width: 300, height: 300)
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
         TriangleView()
+        ArcView()
     }
 }
