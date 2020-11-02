@@ -13,8 +13,17 @@ struct ContentView: View {
     }
 }
 
+struct TriangleView: View {
+    var body: some View {
+        Triangle()
+            .stroke(Color.red, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+            .frame(width: 300, height: 300)
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        TriangleView()
     }
 }
