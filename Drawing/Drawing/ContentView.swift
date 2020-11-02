@@ -77,9 +77,13 @@ struct ColorCyclingCircle: View {
             ForEach(0..<steps) { value in
                 Circle()
                     .inset(by: CGFloat(value))
-                    .strokeBorder(self.color(for: value, brightness: 1), lineWidth: 2)
+                    .strokeBorder(LinearGradient(gradient: Gradient(colors: [
+                        self.color(for: value, brightness: 1),
+                        self.color(for: value, brightness: 0.5)
+                    ]), startPoint: .top, endPoint: .bottom), lineWidth: 2)
             }
         }
+        .drawingGroup()
     }
 
     func color(for value: Int, brightness: Double) -> Color {
@@ -93,6 +97,19 @@ struct ColorCyclingCircle: View {
     }
 }
 
+struct GradientCycleView: View {
+    @State private var colorCycle = 0.0
+
+    var body: some View {
+        VStack {
+            ColorCyclingCircle(amount: self.colorCycle)
+                .frame(width: 300, height: 300)
+
+            Slider(value: $colorCycle)
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
@@ -101,5 +118,6 @@ struct ContentView_Previews: PreviewProvider {
         BorderView()
         FlowerView()
         ImagePaintView()
+        GradientCycleView()
     }
 }
