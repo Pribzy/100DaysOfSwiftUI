@@ -18,6 +18,7 @@
 		34617CCC2550054A0092E28B /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34617CCB2550054A0092E28B /* Flower.swift */; };
 		34617CCF25500F300092E28B /* Trapezoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34617CCE25500F300092E28B /* Trapezoid.swift */; };
 		34617CD2255012AD0092E28B /* CheckerBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34617CD1255012AD0092E28B /* CheckerBoard.swift */; };
+		34617CD5255014660092E28B /* Spirograph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34617CD4255014660092E28B /* Spirograph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		34617CCB2550054A0092E28B /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
 		34617CCE25500F300092E28B /* Trapezoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapezoid.swift; sourceTree = "<group>"; };
 		34617CD1255012AD0092E28B /* CheckerBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerBoard.swift; sourceTree = "<group>"; };
+		34617CD4255014660092E28B /* Spirograph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spirograph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				34617CCB2550054A0092E28B /* Flower.swift */,
 				34617CCE25500F300092E28B /* Trapezoid.swift */,
 				34617CD1255012AD0092E28B /* CheckerBoard.swift */,
+				34617CD4255014660092E28B /* Spirograph.swift */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				34617CB1254FF96E0092E28B /* AppDelegate.swift in Sources */,
 				34617CB3254FF96E0092E28B /* SceneDelegate.swift in Sources */,
+				34617CD5255014660092E28B /* Spirograph.swift in Sources */,
 				34617CD2255012AD0092E28B /* CheckerBoard.swift in Sources */,
 				34617CCC2550054A0092E28B /* Flower.swift in Sources */,
 				34617CC9255000470092E28B /* Arc.swift in Sources */,
