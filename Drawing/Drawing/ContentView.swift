@@ -181,17 +181,17 @@ struct SpiroGraphView: View {
     }
 }
 
+struct ArrowView: View {
+    @State private var thickness = 4
+
+    var body: some View {
+        Arrow()
+            .fill(Color.red)
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-        TriangleView()
-        ArcView()
-        BorderView()
-        FlowerView()
-        ImagePaintView()
-        GradientCycleView()
-        AnimatingView()
-        AnimatingPairView()
-        SpiroGraphView()
+        ArrowView()
     }
 }
