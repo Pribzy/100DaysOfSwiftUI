@@ -8,7 +8,7 @@ struct ActivityListView: View {
     var body: some View {
         NavigationView {
             List(activities.items) { activity in
-                Text(activity.name)
+                ActivityItem(activity: activity)
             }
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("My Activities")
