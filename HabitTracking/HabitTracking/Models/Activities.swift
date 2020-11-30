@@ -9,6 +9,7 @@ class Activities: ObservableObject {
             }
         }
     }
+
     init() {
         if let items = UserDefaults.standard.data(forKey: "Activities") {
             let decoder = JSONDecoder()
@@ -18,5 +19,15 @@ class Activities: ObservableObject {
             }
         }
         self.items = []
+    }
+
+    func update(activity: Activity) {
+        guard let index = getIndex(activity: activity) else { return }
+
+        items[index] = activity
+    }
+
+    private func getIndex(activity: Activity) -> Int? {
+        return items.firstIndex(where: { $0.id == activity.id })
     }
 }

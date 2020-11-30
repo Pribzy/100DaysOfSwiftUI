@@ -28,4 +28,5 @@ struct Activity: Identifiable, Codable {
     let name: String
     let description: String
     let type: ActivityType
+    var completionTimes: Int = 0
 }

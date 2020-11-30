@@ -12,16 +12,13 @@ struct ActivityItem: View {
                 Text(activity.description)
             }
             Spacer()
-            HStack {
-                Image(systemName: activity.type.iconName)
-                    .foregroundColor(.white)
-                Text(activity.type.rawValue)
-                    .foregroundColor(.white)
-                    .bold()
+            VStack {
+                TypeView(type: activity.type)
+
+                Text("Completed: \(activity.completionTimes)")
+                    .italic()
+                    .font(.caption2)
             }
-            .padding(10)
-            .background(activity.type.backgroundColor)
-            .cornerRadius(10)
         }
         .padding(8)
     }
