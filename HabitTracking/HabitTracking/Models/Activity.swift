@@ -1,6 +1,6 @@
 import Foundation
 
-enum ActivityType: String, Codable {
+enum ActivityType: String, Codable, CaseIterable {
     case sport
     case learning
     case cook

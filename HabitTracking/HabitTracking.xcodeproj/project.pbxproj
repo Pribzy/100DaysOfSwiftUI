@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		346308032574FE87006F4DBC /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346308022574FE87006F4DBC /* AddView.swift */; };
 		34C2843225729C80008E3A46 /* HabitTrackingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2843125729C80008E3A46 /* HabitTrackingApp.swift */; };
-		34C2843425729C80008E3A46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2843325729C80008E3A46 /* ContentView.swift */; };
+		34C2843425729C80008E3A46 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2843325729C80008E3A46 /* ActivityListView.swift */; };
 		34C2843625729C81008E3A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C2843525729C81008E3A46 /* Assets.xcassets */; };
 		34C2843925729C81008E3A46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C2843825729C81008E3A46 /* Preview Assets.xcassets */; };
 		34C2844225729FA3008E3A46 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2844125729FA3008E3A46 /* Activity.swift */; };
@@ -16,9 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		346308022574FE87006F4DBC /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		34C2842E25729C80008E3A46 /* HabitTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2843125729C80008E3A46 /* HabitTrackingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackingApp.swift; sourceTree = "<group>"; };
-		34C2843325729C80008E3A46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		34C2843325729C80008E3A46 /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
 		34C2843525729C81008E3A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34C2843825729C81008E3A46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34C2843A25729C81008E3A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +60,8 @@
 			children = (
 				34C284472572A063008E3A46 /* Models */,
 				34C2843125729C80008E3A46 /* HabitTrackingApp.swift */,
-				34C2843325729C80008E3A46 /* ContentView.swift */,
+				34C2843325729C80008E3A46 /* ActivityListView.swift */,
+				346308022574FE87006F4DBC /* AddView.swift */,
 				34C2843525729C81008E3A46 /* Assets.xcassets */,
 				34C2843A25729C81008E3A46 /* Info.plist */,
 				34C2843725729C81008E3A46 /* Preview Content */,
@@ -154,7 +157,8 @@
 			files = (
 				34C2844525729FEB008E3A46 /* Activities.swift in Sources */,
 				34C2844225729FA3008E3A46 /* Activity.swift in Sources */,
-				34C2843425729C80008E3A46 /* ContentView.swift in Sources */,
+				346308032574FE87006F4DBC /* AddView.swift in Sources */,
+				34C2843425729C80008E3A46 /* ActivityListView.swift in Sources */,
 				34C2843225729C80008E3A46 /* HabitTrackingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
