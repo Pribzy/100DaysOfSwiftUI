@@ -5,6 +5,9 @@ struct CheckoutView: View {
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
 
+    @State private var errorMessage = ""
+    @State private var showingErrorMessage = false
+
     var body: some View {
         GeometryReader { geo in
             ScrollView {
@@ -28,6 +31,9 @@ struct CheckoutView: View {
         .alert(isPresented: $showingConfirmation) {
             Alert(title: Text("Thank you!"), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
         }
+        .alert(isPresented: $showingErrorMessage) {
+            Alert(title: Text("Error!"), message: Text(errorMessage), dismissButton: .destructive(Text("OK")))
+        }
     }
 
     func placeOrder() {
@@ -44,7 +50,8 @@ struct CheckoutView: View {
 
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
-                print("No data in response: \(error?.localizedDescription ?? "Unknown error").")
+                self.errorMessage = "There was an error during communicaton. \(error?.localizedDescription)"
+                self.showingErrorMessage = true
                 return
             }
             if let decodedOrder = try? JSONDecoder().decode(Order.self, from: data) {
