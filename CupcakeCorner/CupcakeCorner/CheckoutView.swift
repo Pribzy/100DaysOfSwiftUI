@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct CheckoutView: View {
-    @ObservedObject var order: Order
+    @ObservedObject var observableOrder: ObservableOrder
+
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
 
@@ -17,7 +18,7 @@ struct CheckoutView: View {
                         .scaledToFit()
                         .frame(width: geo.size.width)
 
-                    Text("Your total is $\(self.order.cost, specifier: "%.2f")")
+                    Text("Your total is $\(observableOrder.order.cost, specifier: "%.2f")")
                         .font(.title)
 
                     Button("Place Order") {
@@ -37,7 +38,7 @@ struct CheckoutView: View {
     }
 
     func placeOrder() {
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        guard let encoded = try? JSONEncoder().encode(observableOrder.order) else {
             print("Failed to encode order")
             return
         }
@@ -50,7 +51,7 @@ struct CheckoutView: View {
 
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
-                self.errorMessage = "There was an error during communicaton. \(error?.localizedDescription)"
+                self.errorMessage = "There was an error during communicaton. \(error?.localizedDescription ?? "")"
                 self.showingErrorMessage = true
                 return
             }
@@ -66,6 +67,6 @@ struct CheckoutView: View {
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutView(order: Order())
+        CheckoutView(observableOrder: ObservableOrder(order: OrderStruct()))
     }
 }

@@ -4,7 +4,7 @@ import SwiftUI
 struct CupcakeCornerApp: App {
     var body: some Scene {
         WindowGroup {
-            OrderView()
+            OrderView(observableOrder: ObservableOrder(order: OrderStruct()))
         }
     }
 }
