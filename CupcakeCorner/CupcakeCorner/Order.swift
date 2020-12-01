@@ -23,7 +23,7 @@ class Order: ObservableObject, Codable {
     @Published var city = ""
     @Published var zip = ""
 
-    var hasValidAddress: Bool { !(name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty) }
+    var hasValidAddress: Bool { name.isValid && streetAddress.isValid && city.isValid && zip.isValid }
 
     var cost: Double {
         // $2 per cake
@@ -82,5 +82,8 @@ extension Order {
         try container.encode(city, forKey: .city)
         try container.encode(zip, forKey: .zip)
     }
+}
 
+private extension String {
+    var isValid: Bool { !self.isEmpty && !self.contains(" ") }
 }
