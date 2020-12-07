@@ -66,8 +66,19 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
+struct HashableView: View {
+    let students = [Student(name: "Harry Potter"), Student(name: "Hermione Granger")]
+
+    var body: some View {
+        List(students, id: \.self) { student in
+            Text(student.name)
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        HashableView()
     }
 }

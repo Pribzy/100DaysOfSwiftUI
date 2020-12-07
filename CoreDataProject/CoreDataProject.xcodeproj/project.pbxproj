@@ -15,6 +15,7 @@
 		34664056257E6C3A005B7776 /* CoreDataProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34664054257E6C3A005B7776 /* CoreDataProject.xcdatamodeld */; };
 		34664061257E6C3A005B7776 /* CoreDataProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664060257E6C3A005B7776 /* CoreDataProjectTests.swift */; };
 		3466406C257E6C3A005B7776 /* CoreDataProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3466406B257E6C3A005B7776 /* CoreDataProjectUITests.swift */; };
+		3466407D257E731F005B7776 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3466407C257E731F005B7776 /* Student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		34664067257E6C3A005B7776 /* CoreDataProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3466406B257E6C3A005B7776 /* CoreDataProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProjectUITests.swift; sourceTree = "<group>"; };
 		3466406D257E6C3A005B7776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3466407C257E731F005B7776 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				34664057257E6C3A005B7776 /* Info.plist */,
 				34664054257E6C3A005B7776 /* CoreDataProject.xcdatamodeld */,
 				3466404F257E6C3A005B7776 /* Preview Content */,
+				3466407C257E731F005B7776 /* Student.swift */,
 			);
 			path = CoreDataProject;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				34664053257E6C3A005B7776 /* Persistence.swift in Sources */,
 				3466404C257E6C35005B7776 /* ContentView.swift in Sources */,
 				34664056257E6C3A005B7776 /* CoreDataProject.xcdatamodeld in Sources */,
+				3466407D257E731F005B7776 /* Student.swift in Sources */,
 				3466404A257E6C35005B7776 /* CoreDataProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
