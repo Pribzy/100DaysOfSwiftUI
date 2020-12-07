@@ -114,7 +114,7 @@
 				3453B12C257E19300054B50D /* Assets.xcassets */,
 				34717026257E39FA00895323 /* Bookworm.xcdatamodeld */,
 				3453B128257E192F0054B50D /* BookwormApp.swift */,
-				3473306E257E4DF30060F3E4 /* Custom Views */,
+				3473306E257E4DF30060F3E4 /* CustomViews */,
 				3453B136257E19300054B50D /* Info.plist */,
 				34733059257E421D0060F3E4 /* Persistence.swift */,
 				3453B12E257E19300054B50D /* Preview Content */,
@@ -160,14 +160,14 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		3473306E257E4DF30060F3E4 /* Custom Views */ = {
+		3473306E257E4DF30060F3E4 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				34733063257E46EA0060F3E4 /* EmojiRatingView.swift */,
 				3453B15B257E1BF00054B50D /* PushButton.swift */,
 				3473305E257E45D10060F3E4 /* RatingView.swift */,
 			);
-			path = "Custom Views";
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
