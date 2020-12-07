@@ -3,15 +3,19 @@ import CoreData
 
 struct BookwormView: View {
     @Environment(\.managedObjectContext) var viewContext
-    @FetchRequest(entity: Book.entity(), sortDescriptors: []) var books: FetchedResults<Book>
+    @FetchRequest(entity: Book.entity(),
+                  sortDescriptors: [
+                    NSSortDescriptor(keyPath: \Book.title, ascending: true),
+                    NSSortDescriptor(keyPath: \Book.author, ascending: true)
+                  ]) var books: FetchedResults<Book>
 
     @State private var showingAddScreen = false
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(books) { book in
-                    NavigationLink(destination: Text(book.title ?? "Unknown Title")) {
+                ForEach(books, id: \.self) { book in
+                    NavigationLink(destination: DetailsView(book: book)) {
                         EmojiRatingView(rating: book.rating)
                             .font(.largeTitle)
 

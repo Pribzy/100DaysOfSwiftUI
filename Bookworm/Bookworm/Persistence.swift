@@ -6,15 +6,29 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Book(context: viewContext)
-            newItem.id = UUID()
-            newItem.title = "Test"
-            newItem.genre = "Fantasy"
-            newItem.author = "Me"
-            newItem.review = "Good one!"
-            newItem.rating = 1
-        }
+        let newItem = Book(context: viewContext)
+        newItem.id = UUID()
+        newItem.title = "Red Rising"
+        newItem.genre = "Fantasy"
+        newItem.author = "Me"
+        newItem.review = "Good one!"
+        newItem.rating = 5
+
+        let newItem2 = Book(context: viewContext)
+        newItem2.id = UUID()
+        newItem2.title = "Adorable 2"
+        newItem2.genre = "Fantasy"
+        newItem2.author = "Me"
+        newItem2.review = "Good one!"
+        newItem2.rating = 1
+
+        let newItem3 = Book(context: viewContext)
+        newItem3.id = UUID()
+        newItem3.title = "Red Rising"
+        newItem3.genre = "Fantasy"
+        newItem3.author = "Anthony"
+        newItem3.review = "Good one!"
+        newItem3.rating = 4
         do {
             try viewContext.save()
         } catch {
@@ -25,7 +39,7 @@ struct PersistenceController {
         }
         return result
     }()
-
+    
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
