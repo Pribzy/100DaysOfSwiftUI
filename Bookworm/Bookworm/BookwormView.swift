@@ -9,23 +9,38 @@ struct BookwormView: View {
 
     var body: some View {
         NavigationView {
-            Text("Count: \(books.count)")
-                .navigationBarTitle("Bookworm")
-                .navigationBarItems(trailing:
-                                        Button(action: {
-                                            showingAddScreen.toggle()
-                                        }) {
-                                            Image(systemName: "plus")
-                                        })
-                .sheet(isPresented: $showingAddScreen) {
-                    AddBookView().environment(\.managedObjectContext, viewContext)
+            List {
+                ForEach(books) { book in
+                    NavigationLink(destination: Text(book.title ?? "Unknown Title")) {
+                        EmojiRatingView(rating: book.rating)
+                            .font(.largeTitle)
+
+                        VStack(alignment: .leading) {
+                            Text(book.title ?? "Unknown Title")
+                                .font(.headline)
+                            Text(book.author ?? "Unknown Author")
+                                .foregroundColor(.secondary)
+                        }
+                    }
                 }
+            }
+            .listStyle(InsetGroupedListStyle())
+            .navigationBarTitle("Bookworm")
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                                        showingAddScreen.toggle()
+                                    }) {
+                                        Image(systemName: "plus")
+                                    })
+            .sheet(isPresented: $showingAddScreen) {
+                AddBookView().environment(\.managedObjectContext, viewContext)
+            }
         }
     }
 }
 
 struct BookwormView_Previews: PreviewProvider {
     static var previews: some View {
-        BookwormView()
+        BookwormView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
