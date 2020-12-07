@@ -91,6 +91,6 @@
 | **Day 54** – Bookworm II. | ✅ |
 | **Day 55** – Bookworm II. | ✅ |
 | **Day 56** – Bookworm IV. | ✅ |
-| **Day 57** – Core Data I. | ❌ |
-| **Day 58** – Core Data II. | ❌ |
-| **Day 59** – Core Data II. | ❌ |
+| **Day 57** – Core Data I. | ✅ |
+| **Day 58** – Core Data II. | ✅ |
+| **Day 59** – Core Data II. | ✅ |
