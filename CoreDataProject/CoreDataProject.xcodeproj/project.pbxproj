@@ -16,6 +16,8 @@
 		34664061257E6C3A005B7776 /* CoreDataProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664060257E6C3A005B7776 /* CoreDataProjectTests.swift */; };
 		3466406C257E6C3A005B7776 /* CoreDataProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3466406B257E6C3A005B7776 /* CoreDataProjectUITests.swift */; };
 		3466407D257E731F005B7776 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3466407C257E731F005B7776 /* Student.swift */; };
+		34664083257E7517005B7776 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664081257E7517005B7776 /* Movie+CoreDataClass.swift */; };
+		34664084257E7517005B7776 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664082257E7517005B7776 /* Movie+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		3466406B257E6C3A005B7776 /* CoreDataProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProjectUITests.swift; sourceTree = "<group>"; };
 		3466406D257E6C3A005B7776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3466407C257E731F005B7776 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		34664081257E7517005B7776 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		34664082257E7517005B7776 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		34664048257E6C35005B7776 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				34664088257E7531005B7776 /* CoreDataModels */,
 				34664049257E6C35005B7776 /* CoreDataProjectApp.swift */,
 				3466404B257E6C35005B7776 /* ContentView.swift */,
 				3466404D257E6C3A005B7776 /* Assets.xcassets */,
@@ -137,6 +142,23 @@
 				3466406D257E6C3A005B7776 /* Info.plist */,
 			);
 			path = CoreDataProjectUITests;
+			sourceTree = "<group>";
+		};
+		34664088257E7531005B7776 /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				34664089257E7538005B7776 /* Movie */,
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		34664089257E7538005B7776 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				34664081257E7517005B7776 /* Movie+CoreDataClass.swift */,
+				34664082257E7517005B7776 /* Movie+CoreDataProperties.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +294,8 @@
 				3466404C257E6C35005B7776 /* ContentView.swift in Sources */,
 				34664056257E6C3A005B7776 /* CoreDataProject.xcdatamodeld in Sources */,
 				3466407D257E731F005B7776 /* Student.swift in Sources */,
+				34664083257E7517005B7776 /* Movie+CoreDataClass.swift in Sources */,
+				34664084257E7517005B7776 /* Movie+CoreDataProperties.swift in Sources */,
 				3466404A257E6C35005B7776 /* CoreDataProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
