@@ -1,10 +1,3 @@
-//
-//  CoreDataProjectApp.swift
-//  CoreDataProject
-//
-//  Created by Pribelszki Levente on 2020. 12. 07..
-//
-
 import SwiftUI
 
 @main
@@ -13,7 +6,7 @@ struct CoreDataProjectApp: App {
 
     var body: some Scene {
         WindowGroup {
-            DynamicFilter().environment(\.managedObjectContext, persistenceController.container.viewContext)
+            CandyView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
