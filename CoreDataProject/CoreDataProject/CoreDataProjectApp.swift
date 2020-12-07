@@ -13,7 +13,7 @@ struct CoreDataProjectApp: App {
 
     var body: some Scene {
         WindowGroup {
-            WizardView().environment(\.managedObjectContext, persistenceController.container.viewContext)
+            DynamicFilter().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
