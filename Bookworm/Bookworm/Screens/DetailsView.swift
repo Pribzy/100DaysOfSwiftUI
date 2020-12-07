@@ -2,7 +2,10 @@ import CoreData
 import SwiftUI
 
 struct DetailsView: View {
-    
+    @Environment(\.managedObjectContext) var viewContext
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showingDeleteAlert = false
+
     let book: Book
 
     var body: some View {
@@ -35,6 +38,24 @@ struct DetailsView: View {
             }
         }
         .navigationBarTitle(Text(book.title ?? "Unknown Book"), displayMode: .inline)
+        .alert(isPresented: $showingDeleteAlert) {
+            Alert(title: Text("Delete book"),
+                  message: Text("Are you sure?"),
+                  primaryButton: .destructive(Text("Delete")) { deleteBook() },
+                  secondaryButton: .cancel())
+        }
+        .navigationBarItems(trailing: Button(action: {
+            showingDeleteAlert = true
+        }) {
+            Image(systemName: "trash")
+        })
+    }
+
+    func deleteBook() {
+        viewContext.delete(book)
+
+        try? viewContext.save()
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

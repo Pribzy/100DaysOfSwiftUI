@@ -27,20 +27,35 @@ struct BookwormView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteBooks)
             }
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Bookworm")
-            .navigationBarItems(trailing:
-                                    Button(action: {
-                                        showingAddScreen.toggle()
-                                    }) {
-                                        Image(systemName: "plus")
-                                    })
+            .navigationBarItems(leading: EditButton(),
+                                trailing: Button(action: {
+                                    showingAddScreen.toggle()
+                                }) {
+                                    Image(systemName: "plus")
+                                })
             .sheet(isPresented: $showingAddScreen) {
                 AddBookView().environment(\.managedObjectContext, viewContext)
             }
         }
     }
+
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            // find this book in our fetch request
+            let book = books[offset]
+            
+            // delete it from the context
+            viewContext.delete(book)
+        }
+
+        // save the context
+        try? viewContext.save()
+    }
+
 }
 
 struct BookwormView_Previews: PreviewProvider {
