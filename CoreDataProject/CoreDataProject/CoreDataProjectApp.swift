@@ -13,8 +13,7 @@ struct CoreDataProjectApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            WizardView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
