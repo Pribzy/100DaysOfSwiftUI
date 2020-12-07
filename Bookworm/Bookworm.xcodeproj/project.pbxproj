@@ -18,6 +18,7 @@
 		34626138257E3C9400647A13 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34717026257E39FA00895323 /* Bookworm.xcdatamodeld */; };
 		34717017257E2F1A00895323 /* BookwormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34717016257E2F1A00895323 /* BookwormView.swift */; };
 		3473305A257E421D0060F3E4 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34733059257E421D0060F3E4 /* Persistence.swift */; };
+		3473305F257E45D10060F3E4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473305E257E45D10060F3E4 /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		34717016257E2F1A00895323 /* BookwormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormView.swift; sourceTree = "<group>"; };
 		34717027257E39FA00895323 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
 		34733059257E421D0060F3E4 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3473305E257E45D10060F3E4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				34717016257E2F1A00895323 /* BookwormView.swift */,
 				34717026257E39FA00895323 /* Bookworm.xcdatamodeld */,
 				34733059257E421D0060F3E4 /* Persistence.swift */,
+				3473305E257E45D10060F3E4 /* RatingView.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				34717017257E2F1A00895323 /* BookwormView.swift in Sources */,
 				34626138257E3C9400647A13 /* Bookworm.xcdatamodeld in Sources */,
 				3453B15C257E1BF00054B50D /* PushButton.swift in Sources */,
+				3473305F257E45D10060F3E4 /* RatingView.swift in Sources */,
 				3473305A257E421D0060F3E4 /* Persistence.swift in Sources */,
 				3453B12B257E192F0054B50D /* ContentView.swift in Sources */,
 				3453B129257E192F0054B50D /* BookwormApp.swift in Sources */,
