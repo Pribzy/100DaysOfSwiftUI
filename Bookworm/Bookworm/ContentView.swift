@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Bookworm
-//
-//  Created by Pribelszki Levente on 2020. 12. 07..
-//
-
 import SwiftUI
 import CoreData
 
@@ -73,8 +66,20 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
+struct BindingView: View {
+    @State private var rememberMe = false
+    
+    var body: some View {
+        VStack {
+            PushButton(title: "Remember Me", isOn: rememberMe)
+            Text(rememberMe ? "On" : "Off")
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        BindingView()
     }
 }
