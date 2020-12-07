@@ -77,9 +77,32 @@ struct BindingView: View {
     }
 }
 
+struct SizeClassesView: View {
+    @Environment(\.horizontalSizeClass) var sizeClass
+
+    var body: some View {
+        if sizeClass == .compact {
+            return HStack {
+                Text("Active size class:")
+                Text("COMPACT")
+            }
+            .font(.largeTitle)
+        } else {
+            return HStack {
+                Text("Active size class:")
+                Text("REGULAR")
+            }
+            .font(.largeTitle)
+        }
+    }
+}
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         BindingView()
+        SizeClassesView()
+            .previewDevice(PreviewDevice.init(rawValue: "iPad Pro (9.7-inch)"))
     }
 }
