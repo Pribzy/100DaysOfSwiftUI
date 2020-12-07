@@ -23,7 +23,7 @@
 | **Day 14** – Swift review II. | ✅ |
 | **Day 15** – Swift review III. | ✅ |
 
-### Days 16-24: Starting SwiftUI
+### [Days 16-24: Starting SwiftUI](https://github.com/Pribzy/100DaysOfSwiftUI/milestone/2?closed=1)
 | Day | Status |
 | ----------- | :-: |
 | **Day 16** – WeSplit I. | ✅ |
@@ -41,7 +41,7 @@
 | ----------- | :-: |
 | **Day 25** – Milestone: Projects 1-3 (Challenge: RockPaperScissors) | ✅ |
 
-### Days 26-34: Expanding your skills
+### [Days 26-34: Expanding your skills](https://github.com/Pribzy/100DaysOfSwiftUI/milestone/1?closed=1)
 | Day | Status |
 | ----------- | :-: |
 | **Day 26** – BetterRest I. | ✅ |
@@ -59,7 +59,7 @@
 | ----------- | :-: |
 | **Day 35** – Milestone: Projects 4-6 (Challenge: Edutainment) | ✅ |
 
-### Days 36-46: Scaling up to bigger apps
+### [Days 36-46: Scaling up to bigger apps](https://github.com/Pribzy/100DaysOfSwiftUI/milestone/3?closed=1)
 | Day | Status |
 | ----------- | :-: |
 | **Day 36** – iExpense I. | ✅ |
@@ -80,7 +80,7 @@
 | **Day 47** – Milestone: Projects 7-9 (Challenge: HabitTracking) | ✅ |
 | **Day 48** – Expanding your horizons | ✅ |
 
-### Days 49-59: Focus on data
+### [Days 49-59: Focus on data](https://github.com/Pribzy/100DaysOfSwiftUI/milestone/4?closed=1)
 | Day | Status |
 | ----------- | :-: |
 | **Day 49** – Cupcake Corner I. | ✅ |
