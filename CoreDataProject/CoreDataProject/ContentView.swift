@@ -150,7 +150,9 @@ struct DynamicFilter: View {
 
     var body: some View {
         VStack {
-            FilteredList(filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+            FilteredList(filterKey: "lastName",
+                         filterValue: lastNameFilter,
+                         predicate: .beginsWith(caseSensitive: true)) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
             Button("Add Examples") {
