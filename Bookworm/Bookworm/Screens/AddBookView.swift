@@ -1,6 +1,20 @@
 import SwiftUI
 import CoreData
 
+enum Genre: String, CaseIterable {
+    case fantasy
+    case Horror
+    case kids
+    case mystery
+    case poetry
+    case romance
+    case thriller
+
+    var stringValue: String {
+        return self.rawValue.capitalized
+    }
+}
+
 struct AddBookView: View {
     @Environment(\.managedObjectContext) var viewContext
     @Environment(\.presentationMode) var presentationMode
@@ -8,9 +22,9 @@ struct AddBookView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
-    @State private var genre = ""
+    @State private var genre: Genre = .fantasy
     @State private var review = ""
-    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+    let genres = Genre.allCases
 
     var body: some View {
         NavigationView {
@@ -21,7 +35,7 @@ struct AddBookView: View {
 
                     Picker("Genre", selection: $genre) {
                         ForEach(genres, id: \.self) {
-                            Text($0)
+                            Text($0.stringValue)
                         }
                     }
                 }
@@ -44,7 +58,7 @@ struct AddBookView: View {
         newBook.title = title
         newBook.author = author
         newBook.rating = Int16(rating)
-        newBook.genre = genre
+        newBook.genre = genre.stringValue
         newBook.review = review
         try? viewContext.save()
         presentationMode.wrappedValue.dismiss()
