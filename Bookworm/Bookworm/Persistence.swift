@@ -13,6 +13,7 @@ struct PersistenceController {
         newItem.author = "Me"
         newItem.review = "Good one!"
         newItem.rating = 5
+        newItem.date = Date()
 
         let newItem2 = Book(context: viewContext)
         newItem2.id = UUID()
@@ -21,6 +22,7 @@ struct PersistenceController {
         newItem2.author = "Me"
         newItem2.review = "Good one!"
         newItem2.rating = 1
+        newItem2.date = Date()
 
         let newItem3 = Book(context: viewContext)
         newItem3.id = UUID()
@@ -29,6 +31,7 @@ struct PersistenceController {
         newItem3.author = "Anthony"
         newItem3.review = "Good one!"
         newItem3.rating = 4
+        newItem3.date = Date()
         do {
             try viewContext.save()
         } catch {

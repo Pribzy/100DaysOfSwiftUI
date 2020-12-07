@@ -28,6 +28,9 @@ struct DetailsView: View {
                     .font(.title)
                     .foregroundColor(.secondary)
 
+                Text(DateFormatter.yearMonthDayWithLine.string(from: book.date ?? Date()))
+                    .foregroundColor(.black)
+
                 Text(book.review ?? "No review")
                     .padding()
 

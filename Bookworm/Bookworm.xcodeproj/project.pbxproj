@@ -16,6 +16,7 @@
 		3453B15C257E1BF00054B50D /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3453B15B257E1BF00054B50D /* PushButton.swift */; };
 		3453B164257E2BC40054B50D /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3453B163257E2BC40054B50D /* AddBookView.swift */; };
 		34626138257E3C9400647A13 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34717026257E39FA00895323 /* Bookworm.xcdatamodeld */; };
+		34664036257E591B005B7776 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664035257E591B005B7776 /* DateFormatterExtension.swift */; };
 		34717017257E2F1A00895323 /* BookwormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34717016257E2F1A00895323 /* BookwormView.swift */; };
 		3473305A257E421D0060F3E4 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34733059257E421D0060F3E4 /* Persistence.swift */; };
 		3473305F257E45D10060F3E4 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473305E257E45D10060F3E4 /* RatingView.swift */; };
@@ -55,6 +56,7 @@
 		3453B14C257E19300054B50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3453B15B257E1BF00054B50D /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		3453B163257E2BC40054B50D /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		34664035257E591B005B7776 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		34717016257E2F1A00895323 /* BookwormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormView.swift; sourceTree = "<group>"; };
 		34717027257E39FA00895323 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
 		34733059257E421D0060F3E4 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				34733059257E421D0060F3E4 /* Persistence.swift */,
 				3453B12E257E19300054B50D /* Preview Content */,
 				3473306D257E4DE20060F3E4 /* Screens */,
+				34664035257E591B005B7776 /* DateFormatterExtension.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				34717017257E2F1A00895323 /* BookwormView.swift in Sources */,
 				34733069257E49770060F3E4 /* DetailsView.swift in Sources */,
+				34664036257E591B005B7776 /* DateFormatterExtension.swift in Sources */,
 				34733064257E46EA0060F3E4 /* EmojiRatingView.swift in Sources */,
 				34626138257E3C9400647A13 /* Bookworm.xcdatamodeld in Sources */,
 				3453B15C257E1BF00054B50D /* PushButton.swift in Sources */,
