@@ -102,9 +102,53 @@ struct WizardView: View {
         }
     }
 }
+
+struct PredicateView: View {
+    @Environment(\.managedObjectContext) var viewContext
+    @FetchRequest(entity: Ship.entity(),
+                  sortDescriptors: [],
+                  predicate: NSPredicate(format: "universe == %@", "Star Wars")) var ships: FetchedResults<Ship>
+
+    private var lowerThanF = NSPredicate(format: "name < %@", "F")
+    private var inPredicate = NSPredicate(format: "universe IN %@", ["Aliens", "Firefly", "Star Trek"])
+    private var beginsWith = NSPredicate(format: "name BEGINSWITH %@", "E")
+    private var beginsWithC = NSPredicate(format: "name BEGINSWITH[c] %@", "e")
+    private var notBeginsWithC = NSPredicate(format: "NOT name BEGINSWITH[c] %@", "e")
+
+    var body: some View {
+        VStack {
+            List(ships, id: \.self) { ship in
+                Text(ship.name ?? "Unknown name")
+            }
+
+            Button("Add Examples") {
+                let ship1 = Ship(context: viewContext)
+                ship1.name = "Enterprise"
+                ship1.universe = "Star Trek"
+
+                let ship2 = Ship(context: viewContext)
+                ship2.name = "Defiant"
+                ship2.universe = "Star Trek"
+
+                let ship3 = Ship(context: viewContext)
+                ship3.name = "Millennium Falcon"
+                ship3.universe = "Star Wars"
+
+                let ship4 = Ship(context: viewContext)
+                ship4.name = "Executor"
+                ship4.universe = "Star Wars"
+
+                try? viewContext.save()
+            }
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         HashableView()
+        WizardView()
+        PredicateView()
     }
 }
