@@ -1,9 +1,14 @@
 import SwiftUI
 
-struct UserListView: View {
+public struct UserListView: View {
+    private var interactor: UserFriendInteractorInput
     @State private var users = [User]()
 
-    var body: some View {
+    public init(interactor: UserFriendInteractorInput) {
+        self.interactor = interactor
+    }
+
+    public var body: some View {
         NavigationView {
             List(users) { user in
                 VStack(alignment: .leading) {
@@ -18,7 +23,7 @@ struct UserListView: View {
     }
 
     private func getUsers() {
-        URLSession.shared.request(for: .getUsersAndFriends()) { result in
+        interactor.getUsers { result in
             switch result {
             case .success(let users):
                 self.users = users
@@ -31,6 +36,6 @@ struct UserListView: View {
 
 struct UserListView_Previews: PreviewProvider {
     static var previews: some View {
-        UserListView()
+        UserListView(interactor: UserFriendInteractor())
     }
 }

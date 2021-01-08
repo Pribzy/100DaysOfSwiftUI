@@ -1,7 +1,7 @@
 import Foundation
 
-struct User: Identifiable, Codable {
-    var id: String
+public struct User: Identifiable, Codable {
+    public var id: String
     var isActive: Bool
     var name: String
     var age: Int

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Friend: Codable, Identifiable {
-    var id: String
+public struct Friend: Codable, Identifiable {
+    public var id: String
     var name: String
 }
