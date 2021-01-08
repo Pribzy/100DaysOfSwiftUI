@@ -94,3 +94,9 @@
 | **Day 57** – Core Data I. | ✅ |
 | **Day 58** – Core Data II. | ✅ |
 | **Day 59** – Core Data II. | ✅ |
+
+### Day 60-61: Consolidation V.
+| Day | Status |
+| ----------- | :-: |
+| **Day 60** – Milestone: Projects 10-12 (Challenge: Users and Friends) | ✅ |
+| **Day 61** – Time for Core Data | ✅ |
