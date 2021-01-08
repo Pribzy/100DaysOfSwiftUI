@@ -9,7 +9,7 @@ struct User: Identifiable, Codable {
     var email: String
     var address: String
     var about: String
-    var registered: Date
+    var registered: String
     var tags: [String]
     var friends: [Friend]
 }
