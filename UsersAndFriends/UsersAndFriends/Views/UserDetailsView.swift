@@ -2,7 +2,7 @@ import SwiftUI
 
 struct UserDetailsView: View {
     private var interactor: UserFriendInteractorInput
-    var user: User
+    let user: User
     var friends = [Friend]()
 
     public init(interactor: UserFriendInteractorInput = UserFriendInteractor(), user: User) {

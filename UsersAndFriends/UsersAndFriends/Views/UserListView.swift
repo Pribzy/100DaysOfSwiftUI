@@ -11,10 +11,12 @@ struct UserListView: View {
     var body: some View {
         NavigationView {
             List(users) { user in
-                VStack(alignment: .leading) {
-                    Text(user.name)
-                        .font(.headline)
-                    Text(user.email)
+                NavigationLink(destination: UserDetailsView(user: user)) {
+                    VStack(alignment: .leading) {
+                        Text(user.name)
+                            .font(.headline)
+                        Text(user.email)
+                    }
                 }
             }
             .navigationBarTitle("Users")
