@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3469222225A8763C0054DB42 /* UsersAndFriendsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469222125A8763C0054DB42 /* UsersAndFriendsApp.swift */; };
-		3469222425A8763C0054DB42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469222325A8763C0054DB42 /* ContentView.swift */; };
+		3469222425A8763C0054DB42 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469222325A8763C0054DB42 /* UserListView.swift */; };
 		3469222625A876400054DB42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3469222525A876400054DB42 /* Assets.xcassets */; };
 		3469222925A876400054DB42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3469222825A876400054DB42 /* Preview Assets.xcassets */; };
 		3469223825A877AA0054DB42 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469223725A877AA0054DB42 /* Friend.swift */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		3469221E25A8763C0054DB42 /* UsersAndFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersAndFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3469222125A8763C0054DB42 /* UsersAndFriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAndFriendsApp.swift; sourceTree = "<group>"; };
-		3469222325A8763C0054DB42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3469222325A8763C0054DB42 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		3469222525A876400054DB42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3469222825A876400054DB42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3469222A25A876400054DB42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 				3469223D25A878E00054DB42 /* Network */,
 				3469223625A877A20054DB42 /* Models */,
 				3469222125A8763C0054DB42 /* UsersAndFriendsApp.swift */,
-				3469222325A8763C0054DB42 /* ContentView.swift */,
+				3469222325A8763C0054DB42 /* UserListView.swift */,
 				3469222525A876400054DB42 /* Assets.xcassets */,
 				3469222A25A876400054DB42 /* Info.plist */,
 				3469222725A876400054DB42 /* Preview Content */,
@@ -169,7 +169,7 @@
 				3469223B25A877E10054DB42 /* User.swift in Sources */,
 				3469223825A877AA0054DB42 /* Friend.swift in Sources */,
 				3469224225A87A4A0054DB42 /* URLSessionExtension.swift in Sources */,
-				3469222425A8763C0054DB42 /* ContentView.swift in Sources */,
+				3469222425A8763C0054DB42 /* UserListView.swift in Sources */,
 				3469222225A8763C0054DB42 /* UsersAndFriendsApp.swift in Sources */,
 				3469223F25A879250054DB42 /* Endpoint.swift in Sources */,
 			);
