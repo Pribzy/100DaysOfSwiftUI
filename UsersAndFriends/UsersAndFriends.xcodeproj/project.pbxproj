@@ -15,6 +15,8 @@
 		3469223B25A877E10054DB42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469223A25A877E10054DB42 /* User.swift */; };
 		3469223F25A879250054DB42 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469223E25A879250054DB42 /* Endpoint.swift */; };
 		3469224225A87A4A0054DB42 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469224125A87A4A0054DB42 /* URLSessionExtension.swift */; };
+		3469224725A88B4A0054DB42 /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469224625A88B4A0054DB42 /* UserDetailsView.swift */; };
+		3469224A25A88C700054DB42 /* UserFriendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469224925A88C700054DB42 /* UserFriendInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3469223A25A877E10054DB42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3469223E25A879250054DB42 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		3469224125A87A4A0054DB42 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		3469224625A88B4A0054DB42 /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		3469224925A88C700054DB42 /* UserFriendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +64,14 @@
 		3469222025A8763C0054DB42 /* UsersAndFriends */ = {
 			isa = PBXGroup;
 			children = (
-				3469223D25A878E00054DB42 /* Network */,
-				3469223625A877A20054DB42 /* Models */,
-				3469222125A8763C0054DB42 /* UsersAndFriendsApp.swift */,
-				3469222325A8763C0054DB42 /* UserListView.swift */,
 				3469222525A876400054DB42 /* Assets.xcassets */,
 				3469222A25A876400054DB42 /* Info.plist */,
+				3469223625A877A20054DB42 /* Models */,
+				3469223D25A878E00054DB42 /* Network */,
 				3469222725A876400054DB42 /* Preview Content */,
+				3469224925A88C700054DB42 /* UserFriendInteractor.swift */,
+				3469222125A8763C0054DB42 /* UsersAndFriendsApp.swift */,
+				3469224525A88AE30054DB42 /* Views */,
 			);
 			path = UsersAndFriends;
 			sourceTree = "<group>";
@@ -95,6 +100,15 @@
 				3469224125A87A4A0054DB42 /* URLSessionExtension.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		3469224525A88AE30054DB42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3469222325A8763C0054DB42 /* UserListView.swift */,
+				3469224625A88B4A0054DB42 /* UserDetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,12 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3469224725A88B4A0054DB42 /* UserDetailsView.swift in Sources */,
 				3469223B25A877E10054DB42 /* User.swift in Sources */,
 				3469223825A877AA0054DB42 /* Friend.swift in Sources */,
 				3469224225A87A4A0054DB42 /* URLSessionExtension.swift in Sources */,
 				3469222425A8763C0054DB42 /* UserListView.swift in Sources */,
 				3469222225A8763C0054DB42 /* UsersAndFriendsApp.swift in Sources */,
 				3469223F25A879250054DB42 /* Endpoint.swift in Sources */,
+				3469224A25A88C700054DB42 /* UserFriendInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

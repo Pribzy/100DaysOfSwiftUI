@@ -4,7 +4,7 @@ import SwiftUI
 struct UsersAndFriendsApp: App {
     var body: some Scene {
         WindowGroup {
-            UserListView(interactor: UserFriendInteractor())
+            UserListView()
         }
     }
 }

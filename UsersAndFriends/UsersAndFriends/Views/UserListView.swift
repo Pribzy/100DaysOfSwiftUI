@@ -1,14 +1,14 @@
 import SwiftUI
 
-public struct UserListView: View {
+struct UserListView: View {
     private var interactor: UserFriendInteractorInput
     @State private var users = [User]()
 
-    public init(interactor: UserFriendInteractorInput) {
+    public init(interactor: UserFriendInteractorInput = UserFriendInteractor()) {
         self.interactor = interactor
     }
 
-    public var body: some View {
+    var body: some View {
         NavigationView {
             List(users) { user in
                 VStack(alignment: .leading) {
@@ -36,6 +36,6 @@ public struct UserListView: View {
 
 struct UserListView_Previews: PreviewProvider {
     static var previews: some View {
-        UserListView(interactor: UserFriendInteractor())
+        UserListView()
     }
 }
