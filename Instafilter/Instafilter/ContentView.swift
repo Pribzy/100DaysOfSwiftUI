@@ -61,10 +61,28 @@ struct ActionSheetView: View {
     }
 }
 
+struct CoreImageView: View {
+    @State private var image: Image?
+
+    var body: some View {
+        VStack {
+            image?
+                .resizable()
+                .scaledToFit()
+        }
+        .onAppear(perform: loadImage)
+    }
+
+    func loadImage() {
+        image = Image("cage")
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-        BindingBlurView()
-        ActionSheetView()
+//        ContentView()
+//        BindingBlurView()
+//        ActionSheetView()
+        CoreImageView()
     }
 }
