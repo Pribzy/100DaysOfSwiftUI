@@ -1,3 +1,5 @@
+import CoreImage
+import CoreImage.CIFilterBuiltins
 import SwiftUI
 
 struct ContentView: View {
@@ -74,15 +76,33 @@ struct CoreImageView: View {
     }
 
     func loadImage() {
-        image = Image("cage")
+        guard let inputImage = UIImage(named: "cage") else { return }
+        let beginImage = CIImage(image: inputImage)
+
+        let context = CIContext()
+        let currentFilter = CIFilter.pixellate()
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        currentFilter.scale = 100
+
+        // get a CIImage from our filter or exit if that fails
+        guard let outputImage = currentFilter.outputImage else { return }
+
+        // attempt to get a CGImage from our CIImage
+        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+            // convert that to a UIImage
+            let uiImage = UIImage(cgImage: cgimg)
+
+            // and convert that to a SwiftUI image
+            image = Image(uiImage: uiImage)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        ContentView()
-//        BindingBlurView()
-//        ActionSheetView()
+        //        ContentView()
+        //        BindingBlurView()
+        //        ActionSheetView()
         CoreImageView()
     }
 }
