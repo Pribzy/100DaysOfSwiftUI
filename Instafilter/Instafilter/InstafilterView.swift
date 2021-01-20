@@ -3,6 +3,8 @@ import SwiftUI
 struct InstafilterView: View {
     @State private var image: Image?
     @State private var filterIntensity = 0.5
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
 
     var body: some View {
         NavigationView {
@@ -10,7 +12,6 @@ struct InstafilterView: View {
                 ZStack {
                     Rectangle()
                         .fill(Color.secondary)
-
                     if image != nil {
                         image?
                             .resizable()
@@ -22,12 +23,12 @@ struct InstafilterView: View {
                     }
                 }
                 .onTapGesture {
-                    // select an image
+                    showingImagePicker = true
                 }
 
                 HStack {
                     Text("Intensity")
-                    Slider(value: self.$filterIntensity)
+                    Slider(value: $filterIntensity)
                 }.padding(.vertical)
 
                 HStack {
@@ -44,7 +45,15 @@ struct InstafilterView: View {
             }
             .padding([.horizontal, .bottom])
             .navigationBarTitle("Instafilter")
+            .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+                ImagePicker(image: $inputImage)
+            }
         }
+    }
+
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
     }
 }
 
