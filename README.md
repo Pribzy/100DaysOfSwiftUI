@@ -85,18 +85,37 @@
 | ----------- | :-: |
 | **Day 49** – Cupcake Corner I. | ✅ |
 | **Day 50** – Cupcake Corner II. | ✅ |
-| **Day 51** – Cupcake Corner II. | ✅ |
+| **Day 51** – Cupcake Corner III. | ✅ |
 | **Day 52** – Cupcake Corner IV. | ✅ |
 | **Day 53** – Bookworm I. | ✅ |
 | **Day 54** – Bookworm II. | ✅ |
-| **Day 55** – Bookworm II. | ✅ |
+| **Day 55** – Bookworm III. | ✅ |
 | **Day 56** – Bookworm IV. | ✅ |
 | **Day 57** – Core Data I. | ✅ |
 | **Day 58** – Core Data II. | ✅ |
-| **Day 59** – Core Data II. | ✅ |
+| **Day 59** – Core Data III. | ✅ |
 
 ### Day 60-61: Consolidation V.
 | Day | Status |
 | ----------- | :-: |
 | **Day 60** – Milestone: Projects 10-12 (Challenge: Users and Friends) | ✅ |
 | **Day 61** – Time for Core Data | ✅ |
+
+### [Days 62-76: Views and view controllers](https://github.com/Pribzy/100DaysOfSwiftUI/milestone/5)
+| Day | Status |
+| ----------- | :-: |
+| **Day 62** – Instafilter I. | ✅ |
+| **Day 63** – Instafilter II. | ✅ |
+| **Day 64** – Instafilter III. | ✅ |
+| **Day 65** – Instafilter IV. | ✅ |
+| **Day 66** – Instafilter V. | ✅ |
+| **Day 67** – Instafilter VI. | ✅ |
+| **Day 68** – Bucket List I. | ❌ |
+| **Day 69** – Bucket List II. | ❌ |
+| **Day 70** – Bucket List III. | ❌ |
+| **Day 71** – Bucket List IV. | ❌ |
+| **Day 72** – Bucket List V. | ❌ |
+| **Day 73** – Bucket List VI. | ❌ |
+| **Day 74** – Accessibility I. | ❌ |
+| **Day 75** – Accessibility II. | ❌ |
+| **Day 76** – Accessibility III. | ❌ |
