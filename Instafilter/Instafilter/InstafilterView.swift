@@ -8,6 +8,9 @@ struct InstafilterView: View {
     @State private var processedImage: UIImage?
 
     @State private var filterIntensity = 0.5
+    @State private var filterRadius = 0.5
+    @State private var filterScale = 0.5
+
     @State private var showingImagePicker = false
     @State private var currentFilter: CIFilter = CIFilter.sepiaTone()
     @State private var showingFilterSheet = false
@@ -19,11 +22,27 @@ struct InstafilterView: View {
     var body: some View {
         let intensity = Binding<Double>(
             get: {
-                self.filterIntensity
+                filterIntensity
             },
             set: {
-                self.filterIntensity = $0
-                self.applyProcessing()
+                filterIntensity = $0
+                applyProcessing()
+            }
+        )
+
+        let radius = Binding<Double>(
+            get: { filterRadius },
+            set: {
+                filterRadius = $0
+                applyProcessing()
+            }
+        )
+
+        let scale = Binding<Double>(
+            get: { filterScale },
+            set: {
+                filterScale = $0
+                applyProcessing()
             }
         )
 
@@ -46,10 +65,10 @@ struct InstafilterView: View {
                     showingImagePicker = true
                 }
 
-                HStack {
-                    Text("Intensity")
-                    Slider(value: intensity)
-                }.padding(.vertical)
+                SliderView(currentFilter: currentFilter,
+                           intensity: intensity,
+                           radius: radius,
+                           scale: scale)
 
                 HStack {
                     Button(filterName) {
@@ -101,9 +120,17 @@ struct InstafilterView: View {
 
     private func applyProcessing() {
         let inputKeys = currentFilter.inputKeys
-        if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
-        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
-        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
+        if inputKeys.contains(kCIInputIntensityKey) {
+            currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
+        }
+        if inputKeys.contains(kCIInputRadiusKey) {
+            // challenge 3
+            currentFilter.setValue(filterRadius * 200, forKey: kCIInputRadiusKey)
+        }
+        if inputKeys.contains(kCIInputScaleKey) {
+            // challenge 3
+            currentFilter.setValue(filterScale * 100, forKey: kCIInputScaleKey)
+        }
 
         guard let outputImage = currentFilter.outputImage else { return }
 
@@ -117,6 +144,9 @@ struct InstafilterView: View {
     private func setFilter(_ filter: CIFilter) {
         currentFilter = filter
         filterName = String(filter.name.dropFirst(2))
+        filterIntensity = 0.5
+        filterRadius = 0.5
+        filterScale = 0.5
         loadImage()
     }
 
@@ -138,5 +168,37 @@ struct InstafilterView: View {
 struct InstafilterView_Previews: PreviewProvider {
     static var previews: some View {
         InstafilterView()
+    }
+}
+
+struct SliderView: View {
+    var currentFilter: CIFilter
+    var intensity: Binding<Double>
+    var radius: Binding<Double>
+    var scale: Binding<Double>
+    var body: some View {
+        VStack {
+            if currentFilter.inputKeys.contains(kCIInputIntensityKey) {
+                HStack {
+                    Text("Intensity")
+                    Slider(value: intensity)
+                }
+            }
+
+            if currentFilter.inputKeys.contains(kCIInputRadiusKey) {
+                HStack {
+                    Text("Radius")
+                    Slider(value: radius)
+                }
+            }
+
+            if currentFilter.inputKeys.contains(kCIInputScaleKey) {
+                HStack {
+                    Text("Scale")
+                    Slider(value: scale)
+                }
+            }
+        }
+        .padding(.vertical)
     }
 }
