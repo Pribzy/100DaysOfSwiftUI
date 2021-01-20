@@ -5,6 +5,8 @@ struct InstafilterView: View {
     @State private var image: Image?
     @State private var showingImagePicker = false
 
+    let imageSaver = ImageSaver()
+
     var body: some View {
         VStack {
             image?
@@ -23,6 +25,7 @@ struct InstafilterView: View {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
+        imageSaver.writeToPhotoAlbum(image: inputImage)
     }
 }
 

@@ -13,6 +13,7 @@
 		34AFA78B25B1A24700553F6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34AFA78A25B1A24700553F6A /* Preview Assets.xcassets */; };
 		34AFA79425B6ECA600553F6A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AFA79325B6ECA600553F6A /* ImagePicker.swift */; };
 		34AFA79725B82C3700553F6A /* InstafilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AFA79625B82C3700553F6A /* InstafilterView.swift */; };
+		34AFA81825B83DA200553F6A /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AFA81725B83DA200553F6A /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		34AFA78C25B1A24700553F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34AFA79325B6ECA600553F6A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		34AFA79625B82C3700553F6A /* InstafilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterView.swift; sourceTree = "<group>"; };
+		34AFA81725B83DA200553F6A /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				34AFA78925B1A24700553F6A /* Preview Content */,
 				34AFA79325B6ECA600553F6A /* ImagePicker.swift */,
 				34AFA79625B82C3700553F6A /* InstafilterView.swift */,
+				34AFA81725B83DA200553F6A /* ImageSaver.swift */,
 			);
 			path = Instafilter;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				34AFA79725B82C3700553F6A /* InstafilterView.swift in Sources */,
 				34AFA79425B6ECA600553F6A /* ImagePicker.swift in Sources */,
+				34AFA81825B83DA200553F6A /* ImageSaver.swift in Sources */,
 				34AFA78625B1A24600553F6A /* ContentView.swift in Sources */,
 				34AFA78425B1A24600553F6A /* InstafilterApp.swift in Sources */,
 			);
