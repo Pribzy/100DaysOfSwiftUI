@@ -11,6 +11,7 @@ struct InstafilterView: View {
     @State private var showingImagePicker = false
     @State private var currentFilter: CIFilter = CIFilter.sepiaTone()
     @State private var showingFilterSheet = false
+    @State private var showingSaveError = false
     
     let context = CIContext()
 
@@ -57,7 +58,12 @@ struct InstafilterView: View {
                     Spacer()
 
                     Button("Save") {
-                        saveImage()
+                        if image == nil {
+                            showingSaveError = true
+                        } else {
+                            showingSaveError = false
+                            saveImage()
+                        }
                     }
                 }
             }
@@ -77,6 +83,9 @@ struct InstafilterView: View {
                     .default(Text("Vignette")) { setFilter(CIFilter.vignette()) },
                     .cancel()
                 ])
+            }
+            .alert(isPresented: $showingSaveError) {
+                Alert(title: Text("You didn't load any image!"))
             }
         }
     }
