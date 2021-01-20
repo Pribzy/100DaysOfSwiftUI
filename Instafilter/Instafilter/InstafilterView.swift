@@ -12,6 +12,7 @@ struct InstafilterView: View {
     @State private var currentFilter: CIFilter = CIFilter.sepiaTone()
     @State private var showingFilterSheet = false
     @State private var showingSaveError = false
+    @State private var filterName: String = "Change filter"
     
     let context = CIContext()
 
@@ -51,7 +52,7 @@ struct InstafilterView: View {
                 }.padding(.vertical)
 
                 HStack {
-                    Button("Change Filter") {
+                    Button(filterName) {
                         showingFilterSheet = true
                     }
 
@@ -115,6 +116,7 @@ struct InstafilterView: View {
 
     private func setFilter(_ filter: CIFilter) {
         currentFilter = filter
+        filterName = String(filter.name.dropFirst(2))
         loadImage()
     }
 
