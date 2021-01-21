@@ -14,8 +14,19 @@ struct ContentView: View {
     }
 }
 
+struct FileView: View {
+    var body: some View {
+        Text("Hello World")
+            .onTapGesture {
+                let message = "Test Message"
+                FileManager.default.encode(message, to: "message.txt")
+            }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        FileView()
     }
 }
