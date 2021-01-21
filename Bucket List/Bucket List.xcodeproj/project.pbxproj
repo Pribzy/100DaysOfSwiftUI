@@ -13,6 +13,7 @@
 		3446AE7925B9A9EA00B2ECC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3446AE7825B9A9EA00B2ECC4 /* Assets.xcassets */; };
 		3446AE7C25B9A9EA00B2ECC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3446AE7B25B9A9EA00B2ECC4 /* Preview Assets.xcassets */; };
 		3446AE7F25B9A9EA00B2ECC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3446AE7D25B9A9EA00B2ECC4 /* LaunchScreen.storyboard */; };
+		3446AE8825B9ABAD00B2ECC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE8725B9ABAD00B2ECC4 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3446AE7B25B9A9EA00B2ECC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3446AE7E25B9A9EA00B2ECC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3446AE8025B9A9EA00B2ECC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3446AE8725B9ABAD00B2ECC4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3446AE7D25B9A9EA00B2ECC4 /* LaunchScreen.storyboard */,
 				3446AE8025B9A9EA00B2ECC4 /* Info.plist */,
 				3446AE7A25B9A9EA00B2ECC4 /* Preview Content */,
+				3446AE8725B9ABAD00B2ECC4 /* User.swift */,
 			);
 			path = "Bucket List";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3446AE8825B9ABAD00B2ECC4 /* User.swift in Sources */,
 				3446AE7325B9A9E600B2ECC4 /* AppDelegate.swift in Sources */,
 				3446AE7525B9A9E600B2ECC4 /* SceneDelegate.swift in Sources */,
 				3446AE7725B9A9E600B2ECC4 /* ContentView.swift in Sources */,
