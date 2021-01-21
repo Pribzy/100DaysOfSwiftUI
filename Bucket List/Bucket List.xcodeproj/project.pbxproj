@@ -16,6 +16,7 @@
 		3446AE8825B9ABAD00B2ECC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE8725B9ABAD00B2ECC4 /* User.swift */; };
 		3446AE8B25B9AD3B00B2ECC4 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE8A25B9AD3B00B2ECC4 /* FileManagerExtension.swift */; };
 		3446AE8E25B9B16300B2ECC4 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE8D25B9B16300B2ECC4 /* StateView.swift */; };
+		3446AE9525B9B33900B2ECC4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE9425B9B33900B2ECC4 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3446AE8725B9ABAD00B2ECC4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3446AE8A25B9AD3B00B2ECC4 /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
 		3446AE8D25B9B16300B2ECC4 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		3446AE9425B9B33900B2ECC4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				3446AE8725B9ABAD00B2ECC4 /* User.swift */,
 				3446AE8A25B9AD3B00B2ECC4 /* FileManagerExtension.swift */,
 				3446AE8D25B9B16300B2ECC4 /* StateView.swift */,
+				3446AE9425B9B33900B2ECC4 /* MapView.swift */,
 			);
 			path = "Bucket List";
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3446AE9525B9B33900B2ECC4 /* MapView.swift in Sources */,
 				3446AE8E25B9B16300B2ECC4 /* StateView.swift in Sources */,
 				3446AE8825B9ABAD00B2ECC4 /* User.swift in Sources */,
 				3446AE7325B9A9E600B2ECC4 /* AppDelegate.swift in Sources */,
