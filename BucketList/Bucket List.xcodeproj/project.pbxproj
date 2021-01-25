@@ -19,8 +19,8 @@
 		3446AE9525B9B33900B2ECC4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE9425B9B33900B2ECC4 /* MapView.swift */; };
 		3446AE9A25B9B4BD00B2ECC4 /* SwiftUIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE9925B9B4BD00B2ECC4 /* SwiftUIMapView.swift */; };
 		3446AE9D25B9B72F00B2ECC4 /* BiometricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE9C25B9B72F00B2ECC4 /* BiometricView.swift */; };
-		3498541A25BEABDB00C06746 /* MKPointAnnotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498541925BEABDB00C06746 /* MKPointAnnotationExtension.swift */; };
-		3498541E25BEACC700C06746 /* BucketMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498541D25BEACC700C06746 /* BucketMapView.swift */; };
+		34A52D1625BEB184007DC404 /* BucketMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1525BEB184007DC404 /* BucketMapView.swift */; };
+		34A52D1A25BEB1A0007DC404 /* MKPointAnnotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 		3446AE9425B9B33900B2ECC4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3446AE9925B9B4BD00B2ECC4 /* SwiftUIMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapView.swift; sourceTree = "<group>"; };
 		3446AE9C25B9B72F00B2ECC4 /* BiometricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricView.swift; sourceTree = "<group>"; };
-		3498541925BEABDB00C06746 /* MKPointAnnotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKPointAnnotationExtension.swift; path = ../../../../../../MKPointAnnotationExtension.swift; sourceTree = "<group>"; };
-		3498541D25BEACC700C06746 /* BucketMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BucketMapView.swift; path = ../../../../../../../../BucketMapView.swift; sourceTree = "<group>"; };
+		34A52D1525BEB184007DC404 /* BucketMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketMapView.swift; sourceTree = "<group>"; };
+		34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKPointAnnotationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,6 @@
 		3446AE7125B9A9E600B2ECC4 /* Bucket List */ = {
 			isa = PBXGroup;
 			children = (
-				3498541925BEABDB00C06746 /* MKPointAnnotationExtension.swift */,
 				3446AE9725B9B44200B2ECC4 /* Screens */,
 				3446AE7225B9A9E600B2ECC4 /* AppDelegate.swift */,
 				3446AE7425B9A9E600B2ECC4 /* SceneDelegate.swift */,
@@ -83,6 +82,7 @@
 				3446AE8725B9ABAD00B2ECC4 /* User.swift */,
 				3446AE8A25B9AD3B00B2ECC4 /* FileManagerExtension.swift */,
 				3446AE9425B9B33900B2ECC4 /* MapView.swift */,
+				34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */,
 			);
 			path = "Bucket List";
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 		3498541C25BEACB600C06746 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
-				3498541D25BEACC700C06746 /* BucketMapView.swift */,
+				34A52D1525BEB184007DC404 /* BucketMapView.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -187,14 +187,14 @@
 			files = (
 				3446AE9525B9B33900B2ECC4 /* MapView.swift in Sources */,
 				3446AE8E25B9B16300B2ECC4 /* StateView.swift in Sources */,
-				3498541E25BEACC700C06746 /* BucketMapView.swift in Sources */,
+				34A52D1625BEB184007DC404 /* BucketMapView.swift in Sources */,
 				3446AE8825B9ABAD00B2ECC4 /* User.swift in Sources */,
 				3446AE9A25B9B4BD00B2ECC4 /* SwiftUIMapView.swift in Sources */,
 				3446AE7325B9A9E600B2ECC4 /* AppDelegate.swift in Sources */,
 				3446AE7525B9A9E600B2ECC4 /* SceneDelegate.swift in Sources */,
+				34A52D1A25BEB1A0007DC404 /* MKPointAnnotationExtension.swift in Sources */,
 				3446AE7725B9A9E600B2ECC4 /* ContentView.swift in Sources */,
 				3446AE9D25B9B72F00B2ECC4 /* BiometricView.swift in Sources */,
-				3498541A25BEABDB00C06746 /* MKPointAnnotationExtension.swift in Sources */,
 				3446AE8B25B9AD3B00B2ECC4 /* FileManagerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
