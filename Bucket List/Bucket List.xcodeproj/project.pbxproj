@@ -19,6 +19,7 @@
 		3446AE9525B9B33900B2ECC4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE9425B9B33900B2ECC4 /* MapView.swift */; };
 		3446AE9A25B9B4BD00B2ECC4 /* SwiftUIMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE9925B9B4BD00B2ECC4 /* SwiftUIMapView.swift */; };
 		3446AE9D25B9B72F00B2ECC4 /* BiometricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE9C25B9B72F00B2ECC4 /* BiometricView.swift */; };
+		3498541A25BEABDB00C06746 /* MKPointAnnotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498541925BEABDB00C06746 /* MKPointAnnotationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3446AE9425B9B33900B2ECC4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3446AE9925B9B4BD00B2ECC4 /* SwiftUIMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapView.swift; sourceTree = "<group>"; };
 		3446AE9C25B9B72F00B2ECC4 /* BiometricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricView.swift; sourceTree = "<group>"; };
+		3498541925BEABDB00C06746 /* MKPointAnnotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKPointAnnotationExtension.swift; path = ../../../../../../MKPointAnnotationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		3446AE7125B9A9E600B2ECC4 /* Bucket List */ = {
 			isa = PBXGroup;
 			children = (
+				3498541925BEABDB00C06746 /* MKPointAnnotationExtension.swift */,
 				3446AE9725B9B44200B2ECC4 /* Screens */,
 				3446AE7225B9A9E600B2ECC4 /* AppDelegate.swift */,
 				3446AE7425B9A9E600B2ECC4 /* SceneDelegate.swift */,
@@ -179,6 +182,7 @@
 				3446AE7525B9A9E600B2ECC4 /* SceneDelegate.swift in Sources */,
 				3446AE7725B9A9E600B2ECC4 /* ContentView.swift in Sources */,
 				3446AE9D25B9B72F00B2ECC4 /* BiometricView.swift in Sources */,
+				3498541A25BEABDB00C06746 /* MKPointAnnotationExtension.swift in Sources */,
 				3446AE8B25B9AD3B00B2ECC4 /* FileManagerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
