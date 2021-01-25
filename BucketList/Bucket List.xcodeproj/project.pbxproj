@@ -21,6 +21,7 @@
 		3446AE9D25B9B72F00B2ECC4 /* BiometricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446AE9C25B9B72F00B2ECC4 /* BiometricView.swift */; };
 		34A52D1625BEB184007DC404 /* BucketMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1525BEB184007DC404 /* BucketMapView.swift */; };
 		34A52D1A25BEB1A0007DC404 /* MKPointAnnotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */; };
+		34A52D1D25BEB579007DC404 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1C25BEB579007DC404 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3446AE9C25B9B72F00B2ECC4 /* BiometricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricView.swift; sourceTree = "<group>"; };
 		34A52D1525BEB184007DC404 /* BucketMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketMapView.swift; sourceTree = "<group>"; };
 		34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKPointAnnotationExtension.swift; sourceTree = "<group>"; };
+		34A52D1C25BEB579007DC404 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				34A52D1525BEB184007DC404 /* BucketMapView.swift */,
+				34A52D1C25BEB579007DC404 /* EditView.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				3446AE9525B9B33900B2ECC4 /* MapView.swift in Sources */,
 				3446AE8E25B9B16300B2ECC4 /* StateView.swift in Sources */,
+				34A52D1D25BEB579007DC404 /* EditView.swift in Sources */,
 				34A52D1625BEB184007DC404 /* BucketMapView.swift in Sources */,
 				3446AE8825B9ABAD00B2ECC4 /* User.swift in Sources */,
 				3446AE9A25B9B4BD00B2ECC4 /* SwiftUIMapView.swift in Sources */,
