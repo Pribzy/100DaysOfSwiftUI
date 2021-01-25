@@ -9,4 +9,14 @@ extension MKPointAnnotation {
         annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.13)
         return annotation
     }
+
+    public var wrappedTitle: String {
+        get { title ?? "Unknown value" }
+        set { title = newValue }
+    }
+
+    public var wrappedSubtitle: String {
+        get { subtitle ?? "Unknown value" }
+        set { subtitle = newValue }
+    }
 }
