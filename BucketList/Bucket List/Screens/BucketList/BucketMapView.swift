@@ -79,25 +79,33 @@ struct UnlockedView: View {
         .onAppear(perform: loadData)
     }
     func loadData() {
-        //locations = FileManager.default.decode("SavedPlaces")
+        locations = FileManager.default.decode("SavedPlaces")
     }
 
     func saveData() {
-        //FileManager.default.encode(locations, to: "SavedPlaces")
+        FileManager.default.encode(locations, to: "SavedPlaces")
     }
 }
 
 struct LockedView: View {
     @Binding var isUnlocked: Bool
+    @State private var showingAuthenticationAlert = false
+    @State private var authenticationError = ""
 
     var body: some View {
-        Button("Unlock Places") {
-            authenticate()
+        Group {
+            Button("Unlock Places") {
+                authenticate()
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .clipShape(Capsule())
+        }.alert(isPresented: $showingAuthenticationAlert) {
+            Alert(title: Text("Authentication error"),
+                  message: Text(authenticationError),
+                  dismissButton: .default(Text("OK")))
         }
-        .padding()
-        .background(Color.blue)
-        .foregroundColor(.white)
-        .clipShape(Capsule())
     }
 
     func authenticate() {
@@ -108,7 +116,12 @@ struct LockedView: View {
 
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                 DispatchQueue.main.async {
-                    isUnlocked = success ? true : false
+                    if success {
+                        isUnlocked = true
+                    } else {
+                        self.authenticationError = "\(authenticationError?.localizedDescription ?? "Unknown error.")"
+                        showingAuthenticationAlert = true
+                    }
                 }
             }
         } else { }
