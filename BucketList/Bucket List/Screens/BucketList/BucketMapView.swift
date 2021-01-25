@@ -3,56 +3,64 @@ import SwiftUI
 import MapKit
 
 struct BucketMapView: View {
-
-    @State private var centerCoordinate = CLLocationCoordinate2D()
-    @State private var locations = [CodableMKPointAnnotation]()
-    @State private var selectedPlace: MKPointAnnotation?
-    @State private var showingPlaceDetails = false
-    @State private var showingEditScreen = false
     @State private var isUnlocked = false
 
     var body: some View {
         ZStack {
             if isUnlocked {
-                MapView(centerCoordinate: $centerCoordinate,
-                        selectedPlace: $selectedPlace,
-                        showingPlaceDetails: $showingPlaceDetails,
-                        annotations: locations)
-                    .edgesIgnoringSafeArea(.all)
-                Circle()
-                    .fill(Color.blue)
-                    .opacity(0.3)
-                    .frame(width: 32, height: 32)
-                VStack {
+                UnlockedView()
+            } else {
+                LockedView(isUnlocked: $isUnlocked)
+            }
+        }
+    }
+}
+
+struct BucketMapView_Previews: PreviewProvider {
+    static var previews: some View {
+        BucketMapView()
+    }
+}
+
+struct UnlockedView: View {
+    @State private var centerCoordinate = CLLocationCoordinate2D()
+    @State private var locations = [CodableMKPointAnnotation]()
+    @State private var selectedPlace: MKPointAnnotation?
+    @State private var showingPlaceDetails = false
+    @State private var showingEditScreen = false
+
+    var body: some View {
+        ZStack {
+            MapView(centerCoordinate: $centerCoordinate,
+                    selectedPlace: $selectedPlace,
+                    showingPlaceDetails: $showingPlaceDetails,
+                    annotations: locations)
+                .edgesIgnoringSafeArea(.all)
+            Circle()
+                .fill(Color.blue)
+                .opacity(0.3)
+                .frame(width: 32, height: 32)
+            VStack {
+                Spacer()
+                HStack {
                     Spacer()
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            let newLocation = CodableMKPointAnnotation()
-                            newLocation.title = "Example location"
-                            newLocation.coordinate = centerCoordinate
-                            selectedPlace = newLocation
-                            showingEditScreen = true
-                            locations.append(newLocation)
-                        }) {
-                            Image(systemName: "plus")
-                                .padding()
-                                .background(Color.black.opacity(0.75))
-                                .foregroundColor(.white)
-                                .font(.title)
-                                .clipShape(Circle())
-                                .padding(.trailing)
-                        }
+                    Button(action: {
+                        let newLocation = CodableMKPointAnnotation()
+                        newLocation.title = "Example location"
+                        newLocation.coordinate = centerCoordinate
+                        selectedPlace = newLocation
+                        showingEditScreen = true
+                        locations.append(newLocation)
+                    }) {
+                        Image(systemName: "plus")
+                            .padding()
+                            .background(Color.black.opacity(0.75))
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .clipShape(Circle())
+                            .padding(.trailing)
                     }
                 }
-            } else {
-                Button("Unlock Places") {
-                    authenticate()
-                }
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .clipShape(Capsule())
             }
         }
         .alert(isPresented: $showingPlaceDetails) {
@@ -70,13 +78,26 @@ struct BucketMapView: View {
         }
         .onAppear(perform: loadData)
     }
-
     func loadData() {
-        locations = FileManager.default.decode("SavedPlaces")
+        //locations = FileManager.default.decode("SavedPlaces")
     }
 
     func saveData() {
-        FileManager.default.encode(locations, to: "SavedPlaces")
+        //FileManager.default.encode(locations, to: "SavedPlaces")
+    }
+}
+
+struct LockedView: View {
+    @Binding var isUnlocked: Bool
+
+    var body: some View {
+        Button("Unlock Places") {
+            authenticate()
+        }
+        .padding()
+        .background(Color.blue)
+        .foregroundColor(.white)
+        .clipShape(Capsule())
     }
 
     func authenticate() {
@@ -91,11 +112,5 @@ struct BucketMapView: View {
                 }
             }
         } else { }
-    }
-}
-
-struct BucketMapView_Previews: PreviewProvider {
-    static var previews: some View {
-        BucketMapView()
     }
 }
