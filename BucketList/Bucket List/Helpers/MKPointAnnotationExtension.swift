@@ -1,7 +1,7 @@
 import Foundation
 import MapKit
 
-extension MKPointAnnotation: ObservableObject {
+extension MKPointAnnotation {
     static var example: MKPointAnnotation {
         let annotation = MKPointAnnotation()
         annotation.title = "London"
@@ -20,3 +20,5 @@ extension MKPointAnnotation: ObservableObject {
         set { subtitle = newValue }
     }
 }
+
+extension MKPointAnnotation: ObservableObject { }
