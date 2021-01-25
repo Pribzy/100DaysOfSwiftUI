@@ -7,6 +7,7 @@ struct BucketMapView: View {
     @State private var locations = [MKPointAnnotation]()
     @State private var selectedPlace: MKPointAnnotation?
     @State private var showingPlaceDetails = false
+    @State private var showingEditScreen = false
 
     var body: some View {
         ZStack {
@@ -27,6 +28,8 @@ struct BucketMapView: View {
                         let newLocation = MKPointAnnotation()
                         newLocation.title = "Example location"
                         newLocation.coordinate = centerCoordinate
+                        selectedPlace = newLocation
+                        showingEditScreen = true
                         locations.append(newLocation)
                     }) {
                         Image(systemName: "plus")
@@ -45,8 +48,13 @@ struct BucketMapView: View {
                   message: Text(selectedPlace?.subtitle ?? "Missing place information."),
                   primaryButton: .default(Text("OK")),
                   secondaryButton: .default(Text("Edit")) {
-                // edit this place
-            })
+                    showingEditScreen = true
+                  })
+        }
+        .sheet(isPresented: $showingEditScreen) {
+            if selectedPlace != nil {
+                EditView(placemark: selectedPlace!)
+            }
         }
     }
 }
