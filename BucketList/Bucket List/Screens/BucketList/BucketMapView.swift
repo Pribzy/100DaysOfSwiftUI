@@ -1,3 +1,4 @@
+import LocalAuthentication
 import SwiftUI
 import MapKit
 
@@ -8,39 +9,50 @@ struct BucketMapView: View {
     @State private var selectedPlace: MKPointAnnotation?
     @State private var showingPlaceDetails = false
     @State private var showingEditScreen = false
+    @State private var isUnlocked = false
 
     var body: some View {
         ZStack {
-            MapView(centerCoordinate: $centerCoordinate,
-                    selectedPlace: $selectedPlace,
-                    showingPlaceDetails: $showingPlaceDetails,
-                    annotations: locations)
-                .edgesIgnoringSafeArea(.all)
-            Circle()
-                .fill(Color.blue)
-                .opacity(0.3)
-                .frame(width: 32, height: 32)
-            VStack {
-                Spacer()
-                HStack {
+            if isUnlocked {
+                MapView(centerCoordinate: $centerCoordinate,
+                        selectedPlace: $selectedPlace,
+                        showingPlaceDetails: $showingPlaceDetails,
+                        annotations: locations)
+                    .edgesIgnoringSafeArea(.all)
+                Circle()
+                    .fill(Color.blue)
+                    .opacity(0.3)
+                    .frame(width: 32, height: 32)
+                VStack {
                     Spacer()
-                    Button(action: {
-                        let newLocation = CodableMKPointAnnotation()
-                        newLocation.title = "Example location"
-                        newLocation.coordinate = centerCoordinate
-                        selectedPlace = newLocation
-                        showingEditScreen = true
-                        locations.append(newLocation)
-                    }) {
-                        Image(systemName: "plus")
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            let newLocation = CodableMKPointAnnotation()
+                            newLocation.title = "Example location"
+                            newLocation.coordinate = centerCoordinate
+                            selectedPlace = newLocation
+                            showingEditScreen = true
+                            locations.append(newLocation)
+                        }) {
+                            Image(systemName: "plus")
+                        }
+                        .padding()
+                        .background(Color.black.opacity(0.75))
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .clipShape(Circle())
+                        .padding(.trailing)
                     }
-                    .padding()
-                    .background(Color.black.opacity(0.75))
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .clipShape(Circle())
-                    .padding(.trailing)
                 }
+            } else {
+                Button("Unlock Places") {
+                    authenticate()
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
             }
         }
         .alert(isPresented: $showingPlaceDetails) {
@@ -65,6 +77,20 @@ struct BucketMapView: View {
 
     func saveData() {
         FileManager.default.encode(locations, to: "SavedPlaces")
+    }
+
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "We need to unlock your data."
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                DispatchQueue.main.async {
+                    isUnlocked = success ? true : false
+                }
+            }
+        } else { }
     }
 }
 
