@@ -110,12 +110,12 @@
 | **Day 65** – Instafilter IV. | ✅ |
 | **Day 66** – Instafilter V. | ✅ |
 | **Day 67** – Instafilter VI. | ✅ |
-| **Day 68** – Bucket List I. | ❌ |
-| **Day 69** – Bucket List II. | ❌ |
-| **Day 70** – Bucket List III. | ❌ |
-| **Day 71** – Bucket List IV. | ❌ |
-| **Day 72** – Bucket List V. | ❌ |
-| **Day 73** – Bucket List VI. | ❌ |
+| **Day 68** – Bucket List I. | ✅ |
+| **Day 69** – Bucket List II. | ✅ |
+| **Day 70** – Bucket List III. | ✅ |
+| **Day 71** – Bucket List IV. | ✅ |
+| **Day 72** – Bucket List V. | ✅ |
+| **Day 73** – Bucket List VI. | ✅ |
 | **Day 74** – Accessibility I. | ❌ |
 | **Day 75** – Accessibility II. | ❌ |
 | **Day 76** – Accessibility III. | ❌ |
