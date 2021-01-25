@@ -1,7 +1,7 @@
 import Foundation
 import MapKit
 
-extension MKPointAnnotation {
+extension MKPointAnnotation: ObservableObject {
     static var example: MKPointAnnotation {
         let annotation = MKPointAnnotation()
         annotation.title = "London"
