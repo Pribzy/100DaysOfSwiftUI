@@ -23,6 +23,7 @@
 		34A52D1A25BEB1A0007DC404 /* MKPointAnnotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */; };
 		34A52D1D25BEB579007DC404 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1C25BEB579007DC404 /* EditView.swift */; };
 		34A52D2025BEBC1A007DC404 /* NetworkStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1F25BEBC1A007DC404 /* NetworkStructs.swift */; };
+		34A52D2625BEC035007DC404 /* CodableMKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D2525BEC035007DC404 /* CodableMKPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKPointAnnotationExtension.swift; sourceTree = "<group>"; };
 		34A52D1C25BEB579007DC404 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		34A52D1F25BEBC1A007DC404 /* NetworkStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStructs.swift; sourceTree = "<group>"; };
+		34A52D2525BEC035007DC404 /* CodableMKPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableMKPointAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */,
 				3446AE9425B9B33900B2ECC4 /* MapView.swift */,
 				3446AE8A25B9AD3B00B2ECC4 /* FileManagerExtension.swift */,
+				34A52D2525BEC035007DC404 /* CodableMKPointAnnotation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				3446AE9525B9B33900B2ECC4 /* MapView.swift in Sources */,
 				3446AE8E25B9B16300B2ECC4 /* StateView.swift in Sources */,
+				34A52D2625BEC035007DC404 /* CodableMKPointAnnotation.swift in Sources */,
 				34A52D1D25BEB579007DC404 /* EditView.swift in Sources */,
 				34A52D1625BEB184007DC404 /* BucketMapView.swift in Sources */,
 				3446AE8825B9ABAD00B2ECC4 /* User.swift in Sources */,
