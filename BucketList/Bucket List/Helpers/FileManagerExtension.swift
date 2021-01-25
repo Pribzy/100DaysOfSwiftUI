@@ -11,7 +11,7 @@ extension FileManager {
         }
 
         do {
-            try data.write(to: url)
+            try data.write(to: url, options: [.atomicWrite, .completeFileProtection])
         }
         catch {
             fatalError("Fail to write \(file): \(error.localizedDescription)")
