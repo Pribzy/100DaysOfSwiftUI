@@ -4,7 +4,7 @@ import MapKit
 struct BucketMapView: View {
 
     @State private var centerCoordinate = CLLocationCoordinate2D()
-    @State private var locations = [MKPointAnnotation]()
+    @State private var locations = [CodableMKPointAnnotation]()
     @State private var selectedPlace: MKPointAnnotation?
     @State private var showingPlaceDetails = false
     @State private var showingEditScreen = false
@@ -25,7 +25,7 @@ struct BucketMapView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        let newLocation = MKPointAnnotation()
+                        let newLocation = CodableMKPointAnnotation()
                         newLocation.title = "Example location"
                         newLocation.coordinate = centerCoordinate
                         selectedPlace = newLocation
@@ -51,11 +51,20 @@ struct BucketMapView: View {
                     showingEditScreen = true
                   })
         }
-        .sheet(isPresented: $showingEditScreen) {
+        .sheet(isPresented: $showingEditScreen, onDismiss: saveData) {
             if selectedPlace != nil {
                 EditView(placemark: selectedPlace!)
             }
         }
+        .onAppear(perform: loadData)
+    }
+
+    func loadData() {
+        locations = FileManager.default.decode("SavedPlaces")
+    }
+
+    func saveData() {
+        FileManager.default.encode(locations, to: "SavedPlaces")
     }
 }
 
