@@ -22,6 +22,7 @@
 		34A52D1625BEB184007DC404 /* BucketMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1525BEB184007DC404 /* BucketMapView.swift */; };
 		34A52D1A25BEB1A0007DC404 /* MKPointAnnotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */; };
 		34A52D1D25BEB579007DC404 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1C25BEB579007DC404 /* EditView.swift */; };
+		34A52D2025BEBC1A007DC404 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A52D1F25BEBC1A007DC404 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		34A52D1525BEB184007DC404 /* BucketMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketMapView.swift; sourceTree = "<group>"; };
 		34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKPointAnnotationExtension.swift; sourceTree = "<group>"; };
 		34A52D1C25BEB579007DC404 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		34A52D1F25BEBC1A007DC404 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				3446AE8A25B9AD3B00B2ECC4 /* FileManagerExtension.swift */,
 				3446AE9425B9B33900B2ECC4 /* MapView.swift */,
 				34A52D1925BEB1A0007DC404 /* MKPointAnnotationExtension.swift */,
+				34A52D1F25BEBC1A007DC404 /* Helper.swift */,
 			);
 			path = "Bucket List";
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				3446AE7525B9A9E600B2ECC4 /* SceneDelegate.swift in Sources */,
 				34A52D1A25BEB1A0007DC404 /* MKPointAnnotationExtension.swift in Sources */,
 				3446AE7725B9A9E600B2ECC4 /* ContentView.swift in Sources */,
+				34A52D2025BEBC1A007DC404 /* Helper.swift in Sources */,
 				3446AE9D25B9B72F00B2ECC4 /* BiometricView.swift in Sources */,
 				3446AE8B25B9AD3B00B2ECC4 /* FileManagerExtension.swift in Sources */,
 			);
