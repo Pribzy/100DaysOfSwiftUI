@@ -11,7 +11,7 @@ import SwiftUI
 struct AccesibilityApp: App {
     var body: some Scene {
         WindowGroup {
-            GroupingView()
+            ValueReadingView()
         }
     }
 }
